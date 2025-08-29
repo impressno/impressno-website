@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
-import { PackageCheck, Rocket, ShieldCheck } from "lucide-react" // Added PackageCheck, Rocket, and ShieldCheck icon imports
+import { Code, Search, Users } from "lucide-react" // Icons for software consultancy services
 import { Reveal } from "./reveal"
 import { BlurPanel } from "./blur-panel"
 
@@ -52,8 +52,8 @@ export function HeroSection() {
         transition={{ duration: 1.2, ease: [0.21, 0.47, 0.32, 0.98] }}
       >
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/u3195299943_une_vue_sur_lespace_toil_--ar_11_--sref_httpss.mj_f1cd1575-c301-46fa-8b30-665ae1ab22a0_3_bloom_subtle_6x.png-EslKdscYhdWOUeP4RBajclEejxh8iO.jpeg"
-          alt="KATACHI Studio - Elegant interior with sage green walls and terracotta furniture overlooking surreal landscape"
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+          alt="Impressno - Digital innovation and technology landscape"
           fill
           className="object-cover"
           priority
@@ -70,10 +70,10 @@ export function HeroSection() {
         <div className="container-custom text-center text-white">
           <Reveal>
             <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-none tracking-tight mb-6">
-              <AnimatedText text="Design furniture for" delay={0.5} />
+              <AnimatedText text="Where Creativity" delay={0.5} />
               <br />
               <span className="italic font-light">
-                <AnimatedText text="spaces that breathe." delay={1.1} />
+                <AnimatedText text="& Strategy Meet" delay={1.1} />
               </span>
             </h1>
           </Reveal>
@@ -85,7 +85,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
             >
-              Designed in Belgium, crafted to endure — timeless pieces for modern living.
+              Sustainable model for tailoring apps to the needs of customers, managing their digital footprints.
             </motion.p>
           </Reveal>
         </div>
@@ -101,16 +101,16 @@ export function HeroSection() {
         <BlurPanel className="mx-6 mb-6 px-6 py-4 bg-black/24 backdrop-blur-md border-white/20">
           <div className="flex items-center justify-center gap-6 text-white/90">
             <div className="flex items-center gap-2">
-              <PackageCheck className="w-4 h-4 text-green-400" />
-              <span className="text-sm">Free shipping</span>
+              <Code className="w-4 h-4 text-blue-400" />
+              <span className="text-sm">Software Solutions</span>
             </div>
             <div className="flex items-center gap-2">
-              <Rocket className="w-4 h-4 text-amber-400" />
-              <span className="text-sm">Delivered in 6 weeks</span>
+              <Search className="w-4 h-4 text-green-400" />
+              <span className="text-sm">Research & Innovation</span>
             </div>
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-blue-400" />
-              <span className="text-sm">Lifetime guarantee</span>
+              <Users className="w-4 h-4 text-purple-400" />
+              <span className="text-sm">Societal Impact</span>
             </div>
           </div>
         </BlurPanel>

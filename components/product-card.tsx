@@ -8,7 +8,7 @@ interface ProductCardProps {
   product: {
     id: string
     name: string
-    price: string
+    price?: string
     image: string
     badge?: "New" | "Back in stock" | "Limited"
     materials: string[]
@@ -92,7 +92,7 @@ export function ProductCard({ product, onQuickLook }: ProductCardProps) {
           <div>
             <h3 className="text-lg font-semibold text-white mb-1 drop-shadow-sm">{product.name}</h3>
             <p className="text-sm text-white/90 mb-2 drop-shadow-sm">{product.materials.join(", ")}</p>
-            <span className="text-xl font-bold text-white drop-shadow-sm">{product.price}</span>
+            {/* Removed pricing for core values cards */}
           </div>
         </div>
       </div>

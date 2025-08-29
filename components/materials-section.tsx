@@ -6,38 +6,54 @@ import Image from "next/image"
 import { Reveal } from "./reveal"
 import { cn } from "@/lib/utils"
 
-const materials = [
+const services = [
   {
-    id: "pistachio",
-    name: "Pistachio", // shortened from "Pistachio Green"
-    description: "Luxurious pistachio green velvet with rich texture and depth",
-    image: "/material-oak-macro.png",
+    id: "software",
+    name: "Software Solutions",
+    description:
+      "Custom software development tailored to your business needs. From web applications to mobile apps, we create scalable solutions that drive growth.",
     backgroundImage:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/new-source_bloom_max_1x.jpg-t1V6yfeAZKKcEvWEkPn7Pfx7hkHDMf.jpeg",
-    tint: "bg-green-50",
+    features: [
+      "Custom Web Applications",
+      "Mobile App Development",
+      "API Integration",
+      "Cloud Solutions",
+    ],
   },
   {
-    id: "lunar",
-    name: "Lunar", // shortened from "Lunar Gray"
-    description: "Sophisticated lunar gray with subtle metallic undertones",
-    image: "/material-walnut-macro.png",
+    id: "research",
+    name: "Research & Innovation",
+    description:
+      "Cutting-edge research and development to keep your business ahead of the curve. We explore emerging technologies and innovative approaches.",
     backgroundImage: "/lunar-gray-interior.png",
-    tint: "bg-gray-100",
+    features: [
+      "Technology Research",
+      "Market Analysis",
+      "Innovation Strategy",
+      "Proof of Concepts",
+    ],
   },
   {
-    id: "martian",
-    name: "Martian", // shortened from "Martian Red"
-    description: "Bold martian red with warm terracotta influences",
-    image: "/material-steel-macro.png",
+    id: "societal",
+    name: "Societal Impact",
+    description:
+      "Technology solutions that create positive societal change. We focus on sustainable development and social responsibility in all our projects.",
     backgroundImage: "/martian-red-interior.png",
-    tint: "bg-red-50",
+    features: [
+      "Sustainable Development",
+      "Social Impact Assessment",
+      "Community Engagement",
+      "Ethical Technology",
+    ],
   },
 ]
 
-export function MaterialsSection() {
-  const [activeMaterial, setActiveMaterial] = useState("pistachio")
+export function ServicesBackgroundSection() {
+  const [activeService, setActiveService] = useState("software")
 
-  const activeMaterialData = materials.find((m) => m.id === activeMaterial) || materials[0]
+  const activeServiceData =
+    services.find((s) => s.id === activeService) || services[0]
 
   const AnimatedText = ({ text, delay = 0 }: { text: string; delay?: number }) => {
     return (
@@ -62,26 +78,26 @@ export function MaterialsSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" id="materials">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" id="services-bg">
       <div className="absolute inset-0 z-0">
-        {materials.map((material) => (
+        {services.map((service) => (
           <motion.div
-            key={material.id}
+            key={service.id}
             className="absolute inset-0"
-            initial={{ opacity: material.id === activeMaterial ? 1 : 0 }}
-            animate={{ opacity: material.id === activeMaterial ? 1 : 0 }}
+            initial={{ opacity: service.id === activeService ? 1 : 0 }}
+            animate={{ opacity: service.id === activeService ? 1 : 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
           >
             <Image
-              src={material.backgroundImage || "/placeholder.svg"}
-              alt={`${material.name} interior scene`}
+              src={service.backgroundImage || "/placeholder.svg"}
+              alt={`${service.name} background`}
               fill
               className="object-cover"
               priority
             />
           </motion.div>
         ))}
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <div className="absolute top-[120px] left-0 right-0 z-10">
@@ -90,55 +106,50 @@ export function MaterialsSection() {
             <div>
               <AnimatePresence mode="wait">
                 <motion.h2
-                  key={activeMaterial}
+                  key={activeService}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="font-bold mb-6 text-7xl"
                 >
-                  <AnimatedText text={activeMaterialData.name} delay={0.2} />
+                  <AnimatedText text={activeServiceData.name} delay={0.2} />
                 </motion.h2>
               </AnimatePresence>
               <p className="text-lg text-white/90 leading-relaxed max-w-2xl">
-                Every piece begins with the finest materials, carefully selected for their beauty, durability, and
-                sustainable origins. Our craftspeople honor traditional techniques while embracing modern precision.
+                {activeServiceData.description}
               </p>
+              <ul className="mt-8 space-y-3">
+                {activeServiceData.features.map((feature: string, idx: number) => (
+                  <li key={idx} className="flex items-center text-lg">
+                    <span className="inline-block w-2 h-2 rounded-full bg-white mr-3" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
           </Reveal>
         </div>
-      </div>
-
-      <div className="absolute bottom-8 left-8 z-10 max-w-md hidden">
-        <Reveal delay={0.3}>
-          <blockquote className="pl-0 py-4">
-            <p className="text-xl text-white leading-relaxed italic lg:text-base font-medium">
-              "We believe in creating furniture that transcends trends—pieces that become more beautiful with age,
-              carrying stories and memories through generations."
-            </p>
-            <footer className="mt-4 text-sm text-white/70">— KATACHI Studio</footer>
-          </blockquote>
-        </Reveal>
       </div>
 
       <div className="absolute bottom-8 left-0 right-0 z-10">
         <div className="container-custom">
           <Reveal delay={0.1}>
             <div className="flex flex-wrap justify-center gap-3">
-              {materials.map((material) => (
+              {services.map((service) => (
                 <motion.button
-                  key={material.id}
+                  key={service.id}
                   className={cn(
                     "px-6 py-3 rounded-full font-medium transition-all duration-300 backdrop-blur-md",
-                    activeMaterial === material.id
+                    activeService === service.id
                       ? "bg-white text-neutral-900"
                       : "bg-white/20 text-white hover:bg-white/30",
                   )}
-                  onClick={() => setActiveMaterial(material.id)}
+                  onClick={() => setActiveService(service.id)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {material.name}
+                  {service.name}
                 </motion.button>
               ))}
             </div>

@@ -5,66 +5,76 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import { Reveal } from "./reveal"
 
-const collections = [
+const testimonials = [
   {
-    id: "modern-seating",
-    name: "MODERN SEATING",
+    id: "t1",
+    name: "Alex P.",
     image: "/modern-armchair-pillows.png",
-    count: "8 pieces",
+    quote: "The team delivered our project on time and exceeded expectations. Their software solutions are top-notch!",
+    role: "Startup Founder",
   },
   {
-    id: "modular-design",
-    name: "MODULAR DESIGN",
+    id: "t2",
+    name: "Maria S.",
     image: "/modular-cushion-bench.png",
-    count: "6 pieces",
+    quote: "Impressed by their research insights and innovative approach. We gained a real competitive edge.",
+    role: "Product Manager",
   },
   {
-    id: "cloud-collection",
-    name: "CLOUD COLLECTION",
+    id: "t3",
+    name: "David L.",
     image: "/cloud-white-sofa.png",
-    count: "4 pieces",
+    quote: "Their commitment to societal impact is inspiring. We loved collaborating on our sustainability project!",
+    role: "NGO Director",
   },
   {
-    id: "artistic-pieces",
-    name: "ARTISTIC PIECES",
+    id: "t4",
+    name: "Sophie W.",
     image: "/distressed-artistic-chair.png",
-    count: "5 pieces",
+    quote: "Professional, creative, and always responsive. Highly recommend for any tech challenge.",
+    role: "Business Owner",
   },
   {
-    id: "contemporary",
-    name: "CONTEMPORARY",
+    id: "t5",
+    name: "Chris T.",
     image: "/green-modular-loveseat.png",
-    count: "7 pieces",
+    quote: "The process was smooth and transparent. We felt supported every step of the way.",
+    role: "Operations Lead",
   },
   {
-    id: "textural-craft",
-    name: "TEXTURAL CRAFT",
+    id: "t6",
+    name: "Priya R.",
     image: "/braided-rope-loveseat.png",
-    count: "3 pieces",
+    quote: "Their expertise in cloud and APIs helped us scale fast. Great results!",
+    role: "CTO",
   },
   {
-    id: "maximalist-art",
-    name: "MAXIMALIST ART",
+    id: "t7",
+    name: "Liam F.",
     image: "/colorful-patchwork-sofa.png",
-    count: "4 pieces",
+    quote: "A rare blend of technical skill and human touch. We’ll be back for future projects.",
+    role: "Marketing Lead",
   },
   {
-    id: "scandinavian-comfort",
-    name: "SCANDINAVIAN COMFORT",
+    id: "t8",
+    name: "Elena M.",
     image: "/minimalist-boucle-loveseat.png",
-    count: "6 pieces",
+    quote: "They made complex ideas simple and actionable. Our team learned a lot!",
+    role: "Innovation Strategist",
   },
   {
-    id: "abstract-forms",
-    name: "ABSTRACT FORMS",
+    id: "t9",
+    name: "Omar Z.",
     image: "/abstract-artistic-sofa.png",
-    count: "5 pieces",
+    quote: "Truly collaborative and always thinking ahead. Our partnership was a success.",
+    role: "Program Manager",
   },
   {
-    id: "luxury-textures",
-    name: "LUXURY TEXTURES",
+    id: "t10",
+    name: "Grace K.",
     image: "/textured-cream-loveseat.png",
-    count: "8 pieces",
+    quote: "We saw real impact from their work. Highly recommended for mission-driven teams.",
+    role: "Social Enterprise CEO",
   },
 ]
 
@@ -78,7 +88,7 @@ export function CollectionStrip() {
   const x = useTransform(scrollYProgress, [0, 1], [0, -100])
 
   const itemWidth = 320 // 320px (w-80) + 32px gap = 352px per item
-  const totalWidth = collections.length * (itemWidth + 32) - 32 // subtract last gap
+  const totalWidth = testimonials.length * (itemWidth + 32) - 32 // subtract last gap
   const containerWidth = typeof window !== "undefined" ? window.innerWidth : 1200
   const maxDrag = Math.max(0, totalWidth - containerWidth + 48) // add padding
 
@@ -103,9 +113,9 @@ export function CollectionStrip() {
           dragConstraints={{ left: -maxDrag, right: 0 }}
           dragElastic={0.1}
         >
-          {collections.map((collection, index) => (
+          {testimonials.map((testimonial, index) => (
             <motion.div
-              key={collection.id}
+              key={testimonial.id}
               className="flex-shrink-0 w-80 group cursor-pointer"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
@@ -117,8 +127,8 @@ export function CollectionStrip() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src={collection.image || "/placeholder.svg"}
-                    alt={collection.name}
+                    src={testimonial.image || "/placeholder.svg"}
+                    alt={testimonial.name}
                     fill
                     className="object-cover"
                     sizes="320px"
@@ -126,15 +136,18 @@ export function CollectionStrip() {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300" />
                 </motion.div>
 
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
                   <motion.div
-                    className="text-center text-white"
-                    initial={{ opacity: 0.8 }}
+                    className="text-white"
+                    initial={{ opacity: 0.85 }}
                     whileHover={{ opacity: 1, scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <h3 className="text-3xl font-bold tracking-wider mb-2">{collection.name}</h3>
-                    <p className="text-sm opacity-90">{collection.count}</p>
+                    <p className="text-lg font-medium mb-4">“{testimonial.quote}”</p>
+                    <div className="mt-2">
+                      <span className="block text-base font-bold">{testimonial.name}</span>
+                      <span className="block text-xs opacity-80">{testimonial.role}</span>
+                    </div>
                   </motion.div>
                 </div>
               </div>
@@ -144,7 +157,7 @@ export function CollectionStrip() {
       </div>
 
       <div className="text-center mt-8">
-        <p className="text-sm text-neutral-500">← Drag to explore collections →</p>
+        <p className="text-sm text-neutral-500">← Drag to explore testimonials →</p>
       </div>
     </section>
   )

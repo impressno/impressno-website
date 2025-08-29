@@ -8,61 +8,52 @@ import { Reveal } from "./reveal"
 
 const featuredProducts = [
   {
-    id: "4",
-    name: "Verde Modular Chair",
-    price: "€4,890",
+    id: "core-1",
+    name: "Strategic Focus",
     image: "/green-velvet-modular-chair.png",
     badge: "New" as const,
-    materials: ["Copper Frame", "Premium Velvet"],
-    swatches: [
-      { name: "Forest Green", color: "#355E3B" },
-      { name: "Sage Green", color: "#9CAF88" },
-      { name: "Copper", color: "#B87333" },
+    materials: [
+      "We align technology solutions with your business objectives, ensuring every project delivers measurable value."
     ],
+    swatches: [],
     quickLookImages: [
       "/green-velvet-modular-chair.png",
       "/placeholder.svg?height=600&width=600",
       "/placeholder.svg?height=600&width=600",
     ],
-    dimensions: "W: 180cm × D: 90cm × H: 75cm",
+    dimensions: "",
   },
   {
-    id: "7",
-    name: "Terracotta Cloud Chair",
-    price: "€5,250",
+    id: "core-2",
+    name: "Innovation First",
     image: "/terracotta-cloud-chair.png",
     badge: "New" as const,
-    materials: ["Copper Frame", "Terracotta Velvet"],
-    swatches: [
-      { name: "Terracotta", color: "#E2725B" },
-      { name: "Burnt Orange", color: "#CC5500" },
-      { name: "Copper", color: "#B87333" },
+    materials: [
+      "Embracing cutting-edge technologies and methodologies to keep your business ahead of the competition."
     ],
+    swatches: [],
     quickLookImages: [
       "/terracotta-cloud-chair.png",
       "/placeholder.svg?height=600&width=600",
       "/placeholder.svg?height=600&width=600",
     ],
-    dimensions: "W: 95cm × D: 85cm × H: 80cm",
+    dimensions: "",
   },
   {
-    id: "8",
-    name: "Sage Copper Lounge",
-    price: "€4,675",
+    id: "core-3",
+    name: "Client-Centric",
     image: "/sage-copper-lounge-chair.png",
     badge: "Limited" as const,
-    materials: ["Copper Frame", "Sage Velvet"],
-    swatches: [
-      { name: "Sage Green", color: "#9CAF88" },
-      { name: "Forest Green", color: "#355E3B" },
-      { name: "Copper", color: "#B87333" },
+    materials: [
+      "Your success is our priority. We build lasting partnerships through transparent communication and dedicated support."
     ],
+    swatches: [],
     quickLookImages: [
       "/sage-copper-lounge-chair.png",
       "/placeholder.svg?height=600&width=600",
       "/placeholder.svg?height=600&width=600",
     ],
-    dimensions: "W: 85cm × D: 90cm × H: 75cm",
+    dimensions: "",
   },
 ]
 
@@ -86,11 +77,10 @@ export function FeaturedProducts() {
         <Reveal>
           <div className="text-left mb-16">
             <h2 className="text-4xl text-neutral-900 mb-4 lg:text-6xl">
-              Featured <span className="italic font-light">Collection</span>
+              Our <span className="italic font-light">Core Values</span>
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl">
-              Discover our most beloved pieces, each crafted with meticulous attention to detail and timeless design
-              principles.
+              These principles guide everything we do, from how we approach projects to how we build relationships with our clients.
             </p>
           </div>
         </Reveal>

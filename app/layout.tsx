@@ -10,39 +10,39 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Katachi — Design furniture for spaces that breathe.",
-  description: "Architected in Belgium, built to last—timeless pieces.",
+  title: "Impressno — Where Creativity & Strategy Meet",
+  description: "Sustainable model for tailoring apps to the needs of customers, managing their digital footprints.",
   generator: "v0.app",
   alternates: {
-    canonical: "https://katachi.example/",
+    canonical: "https://impressno.com/",
   },
   openGraph: {
-    siteName: "Katachi",
-    title: "Design furniture for spaces that breathe. | Katachi",
-    description: "Architected in Belgium, built to last—timeless pieces.",
+    siteName: "Impressno",
+    title: "Impressno — Where Creativity & Strategy Meet",
+    description: "Sustainable model for tailoring apps to the needs of customers, managing their digital footprints.",
     type: "website",
-    url: "https://katachi.example/",
+    url: "https://impressno.com/",
     images: [
       {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/opengraph-katachi.jpg-7vz2r3hxZA6woukGOmH115Fg7Piyjs.jpeg",
-        alt: "Katachi design furniture — timeless pieces, architected in Belgium",
+        url: "/placeholder.jpg",
+        alt: "Impressno — Where Creativity & Strategy Meet",
         width: 1200,
         height: 630,
       },
     ],
-    locale: "en_BE",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Design furniture for spaces that breathe. | Katachi",
-    description: "Architected in Belgium, built to last—timeless pieces.",
+    title: "Impressno — Where Creativity & Strategy Meet",
+    description: "Sustainable model for tailoring apps to the needs of customers, managing their digital footprints.",
     images: [
       {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/opengraph-katachi.jpg-7vz2r3hxZA6woukGOmH115Fg7Piyjs.jpeg",
-        alt: "Katachi design furniture — timeless pieces, architected in Belgium",
+        url: "/placeholder.jpg",
+        alt: "Impressno — Where Creativity & Strategy Meet",
       },
     ],
-    site: "@katachi",
+    site: "@impressno",
   },
 }
 

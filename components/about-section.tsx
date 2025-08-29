@@ -53,14 +53,14 @@ export function AboutSection() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-lg md:text-xl text-neutral-600 mb-6 leading-relaxed">
-                We are a forward-thinking software consultancy that believes in the power of technology 
+                We are a forward-thinking software consultancy that believes in the power of technology
                 to transform businesses and create positive societal impact.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="text-neutral-600 mb-8 leading-relaxed">
-                Our sustainable model focuses on tailoring applications to the unique needs of each customer, 
-                while carefully managing their digital footprints. We don't just build software – we craft 
+                Our sustainable model focuses on tailoring applications to the unique needs of each customer,
+                while carefully managing their digital footprints. We don't just build software – we craft
                 digital experiences that drive growth, efficiency, and meaningful change.
               </p>
             </Reveal>
@@ -85,7 +85,7 @@ export function AboutSection() {
           </motion.div>
 
           {/* Image */}
-          <motion.div 
+          <motion.div
             className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden"
             style={{ y: imageY }}
           >
@@ -98,37 +98,6 @@ export function AboutSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </motion.div>
-        </div>
-
-        {/* Values Section */}
-        <div>
-          <Reveal>
-            <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 text-center mb-12">
-              Our Values
-            </h3>
-          </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                className="text-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-                viewport={{ once: true }}
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl shadow-lg mb-4">
-                  <value.icon className="w-8 h-8 text-neutral-700" />
-                </div>
-                <h4 className="text-xl font-semibold text-neutral-900 mb-3">
-                  {value.title}
-                </h4>
-                <p className="text-neutral-600 leading-relaxed">
-                  {value.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

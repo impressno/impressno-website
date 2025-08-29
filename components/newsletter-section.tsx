@@ -36,13 +36,10 @@ export function NewsletterSection() {
             <BlurPanel className="p-8 lg:p-12 bg-white/40 backdrop-blur-md grain-texture">
               <div className="text-center mb-8">
                 <h2 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
-                  <AnimatedText text="Stay ahead of " delay={0.2} />
-                  <span className="italic font-light">
-                    <AnimatedText text="quiet luxury." delay={0.5} />
-                  </span>
+                  <AnimatedText text="Join our community of innovators." delay={0.2} />
                 </h2>
                 <p className="text-lg text-neutral-600">
-                  Be the first to discover new collections, design insights, and exclusive access to limited pieces.
+                  Get the latest on software, research, and societal impact. Receive exclusive updates, insights, and early access to our newest solutions.
                 </p>
               </div>
 
@@ -60,9 +57,8 @@ export function NewsletterSection() {
                         setIsValid(true)
                       }}
                       placeholder="Enter your email address"
-                      className={`w-full pl-12 pr-4 py-4 bg-white/60 backdrop-blur-sm border rounded-full text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-200 ${
-                        !isValid ? "border-red-300 focus:ring-red-500" : "border-neutral-200"
-                      }`}
+                      className={`w-full pl-12 pr-4 py-4 bg-white/60 backdrop-blur-sm border rounded-full text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-200 ${!isValid ? "border-red-300 focus:ring-red-500" : "border-neutral-200"
+                        }`}
                     />
                   </div>
 
@@ -96,16 +92,15 @@ export function NewsletterSection() {
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Check size={24} className="text-green-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-neutral-900 mb-2">Welcome to KATACHI</h3>
+                  <h3 className="text-xl font-semibold text-neutral-900 mb-2">Thank you for joining us!</h3>
                   <p className="text-neutral-600">
-                    Thank you for subscribing. You'll receive our next newsletter with exclusive insights and new
-                    arrivals.
+                    You're now subscribed. Stay tuned for updates on our services, innovation stories, and ways we're making a difference.
                   </p>
                 </motion.div>
               )}
 
               <p className="text-xs text-neutral-500 text-center mt-6">
-                We respect your privacy. Unsubscribe at any time. Read our{" "}
+                We respect your privacy. Unsubscribe at any time. Read our{' '}
                 <a href="#" className="underline hover:text-neutral-700 transition-colors">
                   Privacy Policy
                 </a>
