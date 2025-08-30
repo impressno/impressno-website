@@ -22,10 +22,10 @@ export default function HomePage() {
       <ServicesBackgroundSection />
       <FeaturedProducts />
       {/* <ServicesSection /> */}
-      <NewsletterSection />
       <CollectionStrip />
       <TeamSection />
       <ContactSection />
+      {/* <NewsletterSection /> */}
       <Footer />
     </main>
   )
