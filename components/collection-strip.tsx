@@ -52,7 +52,7 @@ const testimonials = [
     id: "t7",
     name: "Liam F.",
     image: "/colorful-patchwork-sofa.png",
-    quote: "A rare blend of technical skill and human touch. We’ll be back for future projects.",
+    quote: "A rare blend of technical skill and human touch. We'll be back for future projects.",
     role: "Marketing Lead",
   },
   {
@@ -87,18 +87,25 @@ export function CollectionStrip() {
 
   const x = useTransform(scrollYProgress, [0, 1], [0, -100])
 
-  const itemWidth = 320 // 320px (w-80) + 32px gap = 352px per item
-  const totalWidth = testimonials.length * (itemWidth + 32) - 32 // subtract last gap
+  // Make responsive item width
+  const itemWidth = typeof window !== "undefined" ? 
+    window.innerWidth < 640 ? 280 : // mobile
+    window.innerWidth < 1024 ? 300 : // tablet
+    320 // desktop
+    : 320
+
+  const gap = typeof window !== "undefined" && window.innerWidth < 640 ? 16 : 32
+  const totalWidth = testimonials.length * (itemWidth + gap) - gap
   const containerWidth = typeof window !== "undefined" ? window.innerWidth : 1200
-  const maxDrag = Math.max(0, totalWidth - containerWidth + 48) // add padding
+  const maxDrag = Math.max(0, totalWidth - containerWidth + 48)
 
   return (
-    <section ref={containerRef} className="py-20 lg:py-32 overflow-hidden">
-      <div className="mb-12">
+    <section ref={containerRef} className="py-12 sm:py-16 lg:py-20 xl:py-32 overflow-hidden">
+      <div className="mb-8 sm:mb-12">
         <Reveal>
           <div className="container-custom text-center">
-            <h2 className="text-neutral-900 mb-4 text-6xl font-normal">Collections</h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+            <h2 className="text-neutral-900 mb-3 sm:mb-4 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal">Collections</h2>
+            <p className="text-sm sm:text-base lg:text-lg text-neutral-600 max-w-2xl mx-auto px-4">
               Explore our curated collections, each telling a unique story of craftsmanship and design philosophy.
             </p>
           </div>
@@ -107,20 +114,22 @@ export function CollectionStrip() {
 
       <div className="relative">
         <motion.div
-          className="flex gap-8 px-6"
+          className="flex gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6"
           style={{ x }}
           drag="x"
           dragConstraints={{ left: -maxDrag, right: 0 }}
           dragElastic={0.1}
+          dragMomentum={false}
         >
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
-              className="flex-shrink-0 w-80 group cursor-pointer"
+              className="flex-shrink-0 group cursor-pointer"
+              style={{ width: itemWidth }}
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
             >
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-4">
+              <div className="relative aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden mb-3 sm:mb-4">
                 <motion.div
                   className="relative w-full h-full"
                   whileHover={{ filter: "blur(1px)" }}
@@ -131,21 +140,21 @@ export function CollectionStrip() {
                     alt={testimonial.name}
                     fill
                     className="object-cover"
-                    sizes="320px"
+                    sizes="(max-width: 640px) 280px, (max-width: 1024px) 300px, 320px"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300" />
                 </motion.div>
 
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 text-center">
                   <motion.div
                     className="text-white"
                     initial={{ opacity: 0.85 }}
                     whileHover={{ opacity: 1, scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className="text-lg font-medium mb-4">“{testimonial.quote}”</p>
+                    <p className="text-sm sm:text-base lg:text-lg font-medium mb-3 sm:mb-4 leading-relaxed">"{testimonial.quote}"</p>
                     <div className="mt-2">
-                      <span className="block text-base font-bold">{testimonial.name}</span>
+                      <span className="block text-sm sm:text-base font-bold">{testimonial.name}</span>
                       <span className="block text-xs opacity-80">{testimonial.role}</span>
                     </div>
                   </motion.div>
@@ -156,8 +165,8 @@ export function CollectionStrip() {
         </motion.div>
       </div>
 
-      <div className="text-center mt-8">
-        <p className="text-sm text-neutral-500">← Drag to explore testimonials →</p>
+      <div className="text-center mt-6 sm:mt-8">
+        <p className="text-xs sm:text-sm text-neutral-500">← Drag to explore testimonials →</p>
       </div>
     </section>
   )

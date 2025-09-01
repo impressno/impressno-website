@@ -59,17 +59,17 @@ export function HeroSection() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/30 sm:bg-black/20" />
       </motion.div>
 
       {/* Content */}
       <motion.div
-        className="relative z-10 h-full flex items-center justify-center"
+        className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 pt-14 sm:pt-16 lg:pt-20"
         style={{ y: contentY, opacity: contentOpacity }}
       >
-        <div className="container-custom text-center text-white">
+        <div className="container-custom text-center text-white max-w-6xl">
           <Reveal>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-none tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold leading-none tracking-tight mb-4 sm:mb-6">
               <AnimatedText text="Where Creativity" delay={0.5} />
               <br />
               <span className="italic font-light">
@@ -80,7 +80,7 @@ export function HeroSection() {
 
           <Reveal delay={0.2}>
             <motion.p
-              className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8 sm:mb-12 leading-relaxed max-w-4xl mx-auto px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
@@ -93,24 +93,24 @@ export function HeroSection() {
 
       {/* Info Strip */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 z-20 flex justify-center"
+        className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-4 sm:px-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2, ease: [0.21, 0.47, 0.32, 0.98] }}
       >
-        <BlurPanel className="mx-6 mb-6 px-6 py-4 bg-black/24 backdrop-blur-md border-white/20">
-          <div className="flex items-center justify-center gap-6 text-white/90">
+        <BlurPanel className="mx-2 sm:mx-6 mb-4 sm:mb-6 px-4 sm:px-6 py-3 sm:py-4 bg-black/24 backdrop-blur-md border-white/20 w-full max-w-4xl">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-white/90">
             <div className="flex items-center gap-2">
-              <Code className="w-4 h-4 text-blue-400" />
-              <span className="text-sm">Software Solutions</span>
+              <Code className="w-4 h-4 text-blue-400 flex-shrink-0" />
+              <span className="text-xs sm:text-sm">Software Solutions</span>
             </div>
             <div className="flex items-center gap-2">
-              <Search className="w-4 h-4 text-green-400" />
-              <span className="text-sm">Research & Innovation</span>
+              <Search className="w-4 h-4 text-green-400 flex-shrink-0" />
+              <span className="text-xs sm:text-sm">Research & Innovation</span>
             </div>
             <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-purple-400" />
-              <span className="text-sm">Societal Impact</span>
+              <Users className="w-4 h-4 text-purple-400 flex-shrink-0" />
+              <span className="text-xs sm:text-sm">Societal Impact</span>
             </div>
           </div>
         </BlurPanel>

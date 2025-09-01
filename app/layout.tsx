@@ -53,7 +53,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} antialiased`}>
-      <body className="font-sans bg-neutral-50 text-neutral-900 overflow-x-hidden">{children}</body>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+      </head>
+      <body className="font-sans bg-neutral-50 text-neutral-900 overflow-x-hidden">
+        {children}
+      </body>
     </html>
   )
 }

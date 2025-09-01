@@ -49,14 +49,14 @@ const teamMembers = [
 
 export function TeamSection() {
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50" id="team">
+    <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-gradient-to-b from-white to-gray-50" id="team">
       <div className="container-custom">
         <Reveal>
-          <div className="text-left mb-16">
-            <h2 className="text-4xl text-neutral-900 mb-4 lg:text-6xl font-bold">
+          <div className="text-left mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-neutral-900 mb-3 sm:mb-4 font-bold leading-tight">
               Meet Our <span className="italic font-light text-blue-600">Team</span>
             </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg text-neutral-600 max-w-2xl leading-relaxed">
               Our diverse team of experts brings together creativity, technical excellence, and a passion for 
               making a positive impact through technology.
             </p>
@@ -64,7 +64,7 @@ export function TeamSection() {
         </Reveal>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -94,7 +94,7 @@ export function TeamSection() {
               }}
             >
               <Reveal delay={index * 0.1}>
-                <div className="group relative bg-white overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div className="group relative bg-white overflow-hidden rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                   {/* Member Image */}
                   <div className="relative overflow-hidden aspect-[4/5]">
                     <motion.div
@@ -107,7 +107,7 @@ export function TeamSection() {
                         alt={member.name}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </motion.div>
                     
@@ -115,48 +115,48 @@ export function TeamSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
                     {/* Social Links - Appear on Hover */}
-                    <div className="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
+                    <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
                       <motion.a
                         href={member.social.linkedin}
-                        className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-700 hover:text-blue-600 transition-colors"
+                        className="w-8 h-8 sm:w-10 sm:h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-700 hover:text-blue-600 transition-colors touch-target"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <Linkedin size={18} />
+                        <Linkedin size={16} className="sm:w-[18px] sm:h-[18px]" />
                       </motion.a>
                       <motion.a
                         href={member.social.twitter}
-                        className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-700 hover:text-blue-400 transition-colors"
+                        className="w-8 h-8 sm:w-10 sm:h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-700 hover:text-blue-400 transition-colors touch-target"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <Twitter size={18} />
+                        <Twitter size={16} className="sm:w-[18px] sm:h-[18px]" />
                       </motion.a>
                       <motion.a
                         href={member.social.github}
-                        className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-700 hover:text-neutral-900 transition-colors"
+                        className="w-8 h-8 sm:w-10 sm:h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-700 hover:text-neutral-900 transition-colors touch-target"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <Github size={18} />
+                        <Github size={16} className="sm:w-[18px] sm:h-[18px]" />
                       </motion.a>
                     </div>
                   </div>
 
                   {/* Member Info */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-neutral-900 mb-1">{member.name}</h3>
-                    <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-                    <p className="text-neutral-600 text-sm mb-4 leading-relaxed">{member.bio}</p>
+                  <div className="p-4 sm:p-6">
+                    <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mb-1">{member.name}</h3>
+                    <p className="text-blue-600 font-medium mb-2 sm:mb-3 text-sm sm:text-base">{member.role}</p>
+                    <p className="text-neutral-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">{member.bio}</p>
                     
                     {/* Specialties */}
                     <div className="space-y-2">
                       <p className="text-xs font-medium text-neutral-500 uppercase tracking-wide">Specialties</p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
                         {member.specialties.map((specialty, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-gray-100 text-neutral-700 text-xs rounded-full"
+                            className="px-2 sm:px-3 py-1 bg-gray-100 text-neutral-700 text-xs rounded-full"
                           >
                             {specialty}
                           </span>

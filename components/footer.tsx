@@ -135,9 +135,9 @@ export function Footer() {
         </div>
       </div>
       
-      <div className="container-custom py-12 lg:py-16 relative z-10">
+      <div className="container-custom py-8 sm:py-12 lg:py-16 relative z-10">
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 mb-8 sm:mb-10">
           {/* Brand Section */}
           <div className="lg:col-span-5">
             <motion.div
@@ -146,20 +146,20 @@ export function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="mb-5">
-                <h3 className="text-2xl font-bold text-neutral-900 mb-3 tracking-tight">IMPRESSNO</h3>
-                <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-4 shadow-sm" />
+              <div className="mb-4 sm:mb-5">
+                <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-2 sm:mb-3 tracking-tight">IMPRESSNO</h3>
+                <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-3 sm:mb-4 shadow-sm" />
               </div>
-              <p className="text-neutral-700 mb-5 leading-relaxed text-base max-w-md">
+              <p className="text-neutral-700 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base max-w-md">
                 Where creativity and strategy meet. We create innovative software solutions that drive business growth
                 while making a positive societal impact.
               </p>
-              <div className="flex space-x-3">
+              <div className="flex space-x-2 sm:space-x-3">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
                     href={social.href}
-                    className="group w-12 h-12 bg-white/80 backdrop-blur-sm rounded-xl flex items-center justify-center text-neutral-600 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 hover:shadow-xl border border-blue-100/50 hover:border-transparent"
+                    className="group w-10 h-10 sm:w-12 sm:h-12 bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center text-neutral-600 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 hover:shadow-xl border border-blue-100/50 hover:border-transparent touch-target"
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 20 }}
@@ -167,7 +167,7 @@ export function Footer() {
                     transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <social.icon size={20} className="transition-all duration-300" />
+                    <social.icon size={18} className="sm:w-5 sm:h-5 transition-all duration-300" />
                     <span className="sr-only">Follow us on {social.name}</span>
                   </motion.a>
                 ))}
@@ -177,7 +177,7 @@ export function Footer() {
 
           {/* Links Sections */}
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-6 lg:gap-8">
               {Object.entries(footerLinks).map(([category, links], index) => (
                 <motion.div
                   key={category}
@@ -188,15 +188,15 @@ export function Footer() {
                   className="space-y-3"
                 >
                   <div>
-                    <h4 className="font-semibold text-neutral-900 text-sm uppercase tracking-wider mb-1">{category}</h4>
-                    <div className="w-8 h-0.5 bg-gradient-to-r from-blue-400/60 to-cyan-400/60 rounded-full mb-3" />
+                    <h4 className="font-semibold text-neutral-900 text-xs sm:text-sm uppercase tracking-wider mb-1">{category}</h4>
+                    <div className="w-6 sm:w-8 h-0.5 bg-gradient-to-r from-blue-400/60 to-cyan-400/60 rounded-full mb-3" />
                   </div>
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-2 sm:space-y-2.5">
                     {links.map((link, linkIndex) => (
                       <li key={link.name}>
                         <motion.a
                           href={link.href}
-                          className="text-neutral-600 hover:text-neutral-900 transition-all duration-300 group flex items-center text-sm font-medium"
+                          className="text-neutral-600 hover:text-neutral-900 transition-all duration-300 group flex items-center text-xs sm:text-sm font-medium touch-target"
                           whileHover={{ x: 4 }}
                           initial={{ opacity: 0 }}
                           whileInView={{ opacity: 1 }}
@@ -207,7 +207,7 @@ export function Footer() {
                             {link.name}
                             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-300 group-hover:w-full rounded-full" />
                           </span>
-                          <ArrowUpRight size={14} className="ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 text-blue-500" />
+                          <ArrowUpRight size={12} className="sm:w-[14px] sm:h-[14px] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 text-blue-500" />
                         </motion.a>
                       </li>
                     ))}
@@ -220,22 +220,22 @@ export function Footer() {
 
         {/* Bottom Section */}
         <motion.div
-          className="pt-6 border-t border-blue-100/50"
+          className="pt-4 sm:pt-6 border-t border-blue-100/50"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
           <div className="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-8">
-            <p className="text-sm text-neutral-600 font-medium">
+            <p className="text-xs sm:text-sm text-neutral-600 font-medium text-center">
               &copy; {currentYear} Impressno. All rights reserved.
             </p>
-            <div className="flex space-x-6 text-sm">
+            <div className="flex space-x-4 sm:space-x-6 text-xs sm:text-sm">
               {policyLinks.map((link, index) => (
                 <motion.a
                   key={link.name}
                   href={link.href}
-                  className="text-neutral-600 hover:text-neutral-900 transition-colors duration-300 relative group font-medium"
+                  className="text-neutral-600 hover:text-neutral-900 transition-colors duration-300 relative group font-medium touch-target"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}

@@ -97,10 +97,10 @@ export function ServicesBackgroundSection() {
             />
           </motion.div>
         ))}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="absolute top-[120px] left-0 right-0 z-10">
+      <div className="absolute top-16 sm:top-20 lg:top-[120px] left-0 right-0 z-10 px-4 sm:px-6">
         <div className="container-custom text-white">
           <Reveal>
             <div>
@@ -111,18 +111,18 @@ export function ServicesBackgroundSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="font-bold mb-6 text-7xl"
+                  className="font-bold mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight"
                 >
                   <AnimatedText text={activeServiceData.name} delay={0.2} />
                 </motion.h2>
               </AnimatePresence>
-              <p className="text-lg text-white/90 leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base lg:text-lg text-white/90 leading-relaxed max-w-2xl">
                 {activeServiceData.description}
               </p>
-              <ul className="mt-8 space-y-3">
+              <ul className="mt-6 sm:mt-8 space-y-2 sm:space-y-3">
                 {activeServiceData.features.map((feature: string, idx: number) => (
-                  <li key={idx} className="flex items-center text-lg">
-                    <span className="inline-block w-2 h-2 rounded-full bg-white mr-3" />
+                  <li key={idx} className="flex items-center text-sm sm:text-base lg:text-lg">
+                    <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-white mr-2 sm:mr-3 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -132,15 +132,15 @@ export function ServicesBackgroundSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-0 right-0 z-10">
+      <div className="absolute bottom-6 sm:bottom-8 left-0 right-0 z-10 px-4 sm:px-6">
         <div className="container-custom">
           <Reveal delay={0.1}>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3">
               {services.map((service) => (
                 <motion.button
                   key={service.id}
                   className={cn(
-                    "px-6 py-3 rounded-full font-medium transition-all duration-300 backdrop-blur-md",
+                    "px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium transition-all duration-300 backdrop-blur-md text-sm sm:text-base touch-target",
                     activeService === service.id
                       ? "bg-white text-neutral-900"
                       : "bg-white/20 text-white hover:bg-white/30",

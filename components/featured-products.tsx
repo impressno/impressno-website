@@ -72,21 +72,21 @@ export function FeaturedProducts() {
   }
 
   return (
-    <section className="py-20 lg:py-32" id="featured-products">
+    <section className="py-12 sm:py-16 lg:py-20 xl:py-32" id="featured-products">
       <div className="container-custom">
         <Reveal>
-          <div className="text-left mb-16">
-            <h2 className="text-4xl text-neutral-900 mb-4 lg:text-6xl">
+          <div className="text-left mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-neutral-900 mb-3 sm:mb-4 font-bold leading-tight">
               Our <span className="italic font-light">Core Values</span>
             </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl">
+            <p className="text-base sm:text-lg text-neutral-600 max-w-2xl">
               These principles guide everything we do, from how we approach projects to how we build relationships with our clients.
             </p>
           </div>
         </Reveal>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           initial="hidden"
           animate="visible"
           variants={{
