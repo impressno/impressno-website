@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 export function Header() {
@@ -46,13 +47,25 @@ export function Header() {
           <motion.div className="flex-shrink-0" whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
             <a
               href="#"
-              className={cn(
-                "text-xl lg:text-2xl font-bold tracking-tight transition-colors",
-                isScrolled ? "text-neutral-900 hover:text-neutral-700" : "text-white hover:text-white/80",
-              )}
+              className="flex items-center gap-3 group"
               aria-label="Impressno Home"
             >
-              IMPRESSNO
+              <div className="relative w-8 h-8 lg:w-10 lg:h-10">
+                <Image
+                  src="/impressno-logo.svg"
+                  alt="Impressno Logo"
+                  fill
+                  className="object-contain transition-transform duration-200 group-hover:scale-110"
+                />
+              </div>
+              <span
+                className={cn(
+                  "text-xl lg:text-2xl font-bold tracking-tight transition-colors",
+                  isScrolled ? "text-neutral-900 hover:text-neutral-700" : "text-white hover:text-white/80",
+                )}
+              >
+                IMPRESSNO
+              </span>
             </a>
           </motion.div>
 
