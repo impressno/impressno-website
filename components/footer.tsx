@@ -145,7 +145,7 @@ export function Footer() {
                 <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-3 sm:mb-4 shadow-sm" />
               </div>
               <p className="text-neutral-700 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base max-w-md">
-                Where creativity and strategy meet. We create innovative software solutions that drive business growth
+                Where Creativity & Strategy Meet. We create innovative software solutions that drive business growth
                 while making a positive societal impact.
               </p>
               <div className="flex space-x-2 sm:space-x-3">
@@ -220,11 +220,11 @@ export function Footer() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-8">
-            <p className="text-xs sm:text-sm text-neutral-600 font-medium text-center">
+          <div className="flex w-full flex-row items-center justify-between">
+            <p className="text-xs sm:text-sm text-neutral-600 font-medium">
               &copy; {currentYear} Impressno. All rights reserved.
             </p>
-            <div className="flex space-x-4 sm:space-x-6 text-xs sm:text-sm">
+            <div className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm">
               {policyLinks.map((link, index) => (
                 <motion.a
                   key={link.name}

@@ -23,7 +23,7 @@ const teamMembers = [
     id: "2",
     name: "Sarah Johnson",
     role: "Research Director",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
     bio: "PhD in Computer Science with expertise in AI/ML and emerging technology research.",
     specialties: ["AI/ML Research", "Innovation Strategy", "Technology Assessment"],
     social: {
@@ -36,7 +36,7 @@ const teamMembers = [
     id: "3",
     name: "Marcus Rodriguez",
     role: "Societal Impact Lead",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
     bio: "Social entrepreneur focused on creating technology solutions that drive positive change.",
     specialties: ["Social Impact", "Sustainable Development", "Community Engagement"],
     social: {
@@ -57,7 +57,7 @@ export function TeamSection() {
               Meet Our <span className="italic font-light text-blue-600">Team</span>
             </h2>
             <p className="text-base sm:text-lg text-neutral-600 max-w-2xl leading-relaxed">
-              Our diverse team of experts brings together creativity, technical excellence, and a passion for 
+              Our diverse team of experts brings together creativity, technical excellence, and a passion for
               making a positive impact through technology.
             </p>
           </div>
@@ -110,10 +110,10 @@ export function TeamSection() {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </motion.div>
-                    
+
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    
+
                     {/* Social Links - Appear on Hover */}
                     <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
                       <motion.a
@@ -148,7 +148,7 @@ export function TeamSection() {
                     <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mb-1">{member.name}</h3>
                     <p className="text-blue-600 font-medium mb-2 sm:mb-3 text-sm sm:text-base">{member.role}</p>
                     <p className="text-neutral-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">{member.bio}</p>
-                    
+
                     {/* Specialties */}
                     <div className="space-y-2">
                       <p className="text-xs font-medium text-neutral-500 uppercase tracking-wide">Specialties</p>

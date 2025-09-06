@@ -107,11 +107,11 @@ export function AboutSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10" />
-            
+
             {/* Floating stats */}
             <div className="absolute bottom-3 left-3 right-3">
               <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
-                <motion.div 
+                <motion.div
                   className="bg-white/20 backdrop-blur-md rounded-md p-1.5 sm:p-2 text-center border border-white/20"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export function AboutSection() {
                   <div className="text-white font-bold text-xs sm:text-sm">50+</div>
                   <div className="text-white/80 text-xs">Projects</div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="bg-white/20 backdrop-blur-md rounded-md p-1.5 sm:p-2 text-center border border-white/20"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ export function AboutSection() {
                   <div className="text-white font-bold text-xs sm:text-sm">25+</div>
                   <div className="text-white/80 text-xs">Clients</div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="bg-white/20 backdrop-blur-md rounded-md p-1.5 sm:p-2 text-center border border-white/20"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -146,55 +146,7 @@ export function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Values Section */}
-        <div className="mb-0">
-          <Reveal>
-            <div className="text-center mb-6 sm:mb-8 lg:mb-10">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900 mb-2 sm:mb-3">
-                What <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Drives</span> Us
-              </h3>
-              <p className="text-xs sm:text-sm lg:text-base text-neutral-600 max-w-xl mx-auto leading-relaxed">
-                These principles guide everything we do, from how we approach projects to how we build relationships with our clients.
-              </p>
-            </div>
-          </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                className="group relative"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="relative bg-white/80 backdrop-blur-sm rounded-lg p-4 sm:p-5 h-full shadow-md border border-neutral-100 hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
-                  {/* Icon */}
-                  <div className="mb-3">
-                    <div className="relative inline-flex">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <value.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                      </div>
-                      <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <h4 className="text-sm sm:text-base font-bold text-neutral-900 mb-1.5 sm:mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                    {value.title}
-                  </h4>
-                  <p className="text-neutral-600 leading-relaxed text-xs sm:text-sm">
-                    {value.description}
-                  </p>
-
-                  {/* Hover effect border */}
-                  <div className="absolute inset-0 rounded-lg border border-transparent group-hover:border-blue-500/20 transition-all duration-300" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )
