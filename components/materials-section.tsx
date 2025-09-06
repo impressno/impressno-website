@@ -43,8 +43,8 @@ const services = [
     features: [
       "Sustainable Development",
       "Social Impact Assessment",
-      "Community Engagement",
-      "Ethical Technology",
+      "Community / Outreach Engagement",
+      "Skill Development and Training",
     ],
   },
 ]

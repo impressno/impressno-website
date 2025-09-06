@@ -10,13 +10,10 @@ export function Footer() {
       { name: "Software Solutions", href: "#services" },
       { name: "Research & Innovation", href: "#services" },
       { name: "Societal Impact", href: "#services" },
-      { name: "Custom Development", href: "#services" },
-      { name: "Consulting", href: "#services" },
     ],
     Company: [
       { name: "About Us", href: "#about" },
       { name: "Our Approach", href: "#about" },
-      { name: "Sustainability", href: "#about" },
       { name: "Careers", href: "#" },
       { name: "Blog", href: "#" },
     ],

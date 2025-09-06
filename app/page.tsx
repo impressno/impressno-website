@@ -22,7 +22,7 @@ export default function HomePage() {
       <ServicesBackgroundSection />
       <FeaturedProducts />
       {/* <ServicesSection /> */}
-      <CollectionStrip />
+      {/* <CollectionStrip /> */}
       <TeamSection />
       <ContactSection />
       {/* <NewsletterSection /> */}
