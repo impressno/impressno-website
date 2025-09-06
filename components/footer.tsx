@@ -13,16 +13,13 @@ export function Footer() {
     ],
     Company: [
       { name: "About Us", href: "#about" },
-      { name: "Our Approach", href: "#about" },
-      { name: "Careers", href: "#" },
       { name: "Blog", href: "#" },
+      { name: "Careers", href: "#" },
     ],
     Support: [
       { name: "Contact Us", href: "#contact" },
       { name: "Project Inquiry", href: "#contact" },
-      { name: "Technical Support", href: "#contact" },
-      { name: "Documentation", href: "#" },
-      { name: "FAQ", href: "#" },
+      { name: "Technical Support", href: "#contact" }
     ],
   }
 
@@ -43,69 +40,69 @@ export function Footer() {
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Animated Shapes */}
-        <motion.div 
+        <motion.div
           className="absolute -top-32 -left-20 w-80 h-80 bg-gradient-to-r from-blue-500/3 to-cyan-500/3 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             x: [0, 40, 0],
             y: [0, -30, 0],
             scale: [1, 1.15, 1]
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute -top-24 right-10 w-64 h-64 bg-gradient-to-r from-blue-500/2 to-cyan-500/2 rounded-2xl blur-2xl rotate-12"
-          animate={{ 
+          animate={{
             rotate: [12, 45, 12],
             x: [0, -30, 0],
             y: [0, 20, 0]
           }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute -top-16 left-1/2 w-48 h-48 bg-gradient-to-r from-blue-500/2 to-cyan-500/2 rounded-3xl blur-xl rotate-45"
-          animate={{ 
+          animate={{
             x: [0, 25, 0],
             y: [0, -15, 0],
             rotate: [45, 135, 45]
           }}
           transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute top-1/3 -right-10 w-48 h-48 bg-gradient-to-r from-blue-500/2 to-cyan-500/2 rounded-3xl blur-xl rotate-45"
-          animate={{ 
+          animate={{
             x: [0, 35, 0],
             y: [0, -25, 0],
             rotate: [45, 225, 45]
           }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-10 left-1/3 w-56 h-56 bg-gradient-to-r from-blue-500/2 to-cyan-500/2 rounded-full blur-2xl"
-          animate={{ 
+          animate={{
             x: [0, 30, 0],
             y: [0, -20, 0],
             scale: [1, 1.1, 1]
           }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute -bottom-16 -right-16 w-72 h-72 bg-gradient-to-r from-blue-500/3 to-cyan-500/3 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             x: [0, -25, 0],
             y: [0, 15, 0],
             scale: [1, 1.08, 1]
           }}
           transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
         />
-        
+
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.02)_1px,transparent_1px)] bg-[length:80px_80px]" />
         </div>
-        
+
         {/* Top Gradient */}
         <div className="absolute -top-20 left-0 w-full h-40 bg-gradient-to-b from-blue-500/1 to-transparent" />
-        
+
         {/* Floating Dots */}
         <div className="absolute inset-0">
           {Array.from({ length: 15 }, (_, i) => (
@@ -131,7 +128,7 @@ export function Footer() {
           ))}
         </div>
       </div>
-      
+
       <div className="container-custom py-8 sm:py-12 lg:py-16 relative z-10">
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 mb-8 sm:mb-10">
