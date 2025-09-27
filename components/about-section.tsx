@@ -43,9 +43,9 @@ export function AboutSection() {
     <section id="about" ref={containerRef} className="pt-6 pb-8 sm:pt-8 sm:pb-12 lg:pt-12 lg:pb-16 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-8 -left-32 w-48 h-48 lg:w-64 lg:h-64 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-8 -left-32 w-48 h-48 lg:w-64 lg:h-64 bg-gradient-to-r from-rose-500/5 to-purple-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-8 -right-32 w-56 h-56 lg:w-72 lg:h-72 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] bg-gradient-to-r from-green-500/3 to-blue-500/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] bg-gradient-to-r from-green-500/3 to-rose-500/3 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -56,7 +56,7 @@ export function AboutSection() {
             <Reveal>
               <div className="mb-3 lg:mb-4">
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 mb-2 lg:mb-3 leading-tight">
-                  Where <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Innovation</span> Meets Impact
+                  Where <span className="bg-gradient-to-r from-rose-600 to-purple-600 bg-clip-text text-transparent">Innovation</span> Meets Impact
                 </h2>
               </div>
             </Reveal>
@@ -76,7 +76,7 @@ export function AboutSection() {
             <Reveal delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-2">
                 <motion.button
-                  className="px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-md hover:shadow-lg text-center text-xs sm:text-sm"
+                  className="px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-rose-600 to-purple-600 text-white rounded-lg font-medium hover:from-rose-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg text-center text-xs sm:text-sm"
                   whileHover={{ scale: 1.02, y: -1 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -106,7 +106,7 @@ export function AboutSection() {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-600/10 to-purple-600/10" />
 
             {/* Floating stats */}
             <div className="absolute bottom-3 left-3 right-3">

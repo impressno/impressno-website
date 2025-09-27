@@ -36,7 +36,7 @@ export function ProductCard({ product, onQuickLook }: ProductCardProps) {
             className={cn(
               "px-3 py-1 text-xs font-medium rounded-full backdrop-blur-sm",
               product.badge === "New" && "bg-green-500/90 text-white",
-              product.badge === "Back in stock" && "bg-blue-500/90 text-white",
+              product.badge === "Back in stock" && "bg-rose-500/90 text-white",
               product.badge === "Limited" && "bg-amber-500/90 text-white",
             )}
           >

@@ -41,7 +41,7 @@ export function Footer() {
       <div className="absolute inset-0">
         {/* Animated Shapes */}
         <motion.div
-          className="absolute -top-32 -left-20 w-80 h-80 bg-gradient-to-r from-blue-500/3 to-cyan-500/3 rounded-full blur-3xl"
+          className="absolute -top-32 -left-20 w-80 h-80 bg-gradient-to-r from-rose-500/3 to-purple-500/3 rounded-full blur-3xl"
           animate={{
             x: [0, 40, 0],
             y: [0, -30, 0],
@@ -50,7 +50,7 @@ export function Footer() {
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute -top-24 right-10 w-64 h-64 bg-gradient-to-r from-blue-500/2 to-cyan-500/2 rounded-2xl blur-2xl rotate-12"
+          className="absolute -top-24 right-10 w-64 h-64 bg-gradient-to-r from-rose-500/2 to-purple-500/2 rounded-2xl blur-2xl rotate-12"
           animate={{
             rotate: [12, 45, 12],
             x: [0, -30, 0],
@@ -59,7 +59,7 @@ export function Footer() {
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute -top-16 left-1/2 w-48 h-48 bg-gradient-to-r from-blue-500/2 to-cyan-500/2 rounded-3xl blur-xl rotate-45"
+          className="absolute -top-16 left-1/2 w-48 h-48 bg-gradient-to-r from-rose-500/2 to-purple-500/2 rounded-3xl blur-xl rotate-45"
           animate={{
             x: [0, 25, 0],
             y: [0, -15, 0],
@@ -68,7 +68,7 @@ export function Footer() {
           transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-1/3 -right-10 w-48 h-48 bg-gradient-to-r from-blue-500/2 to-cyan-500/2 rounded-3xl blur-xl rotate-45"
+          className="absolute top-1/3 -right-10 w-48 h-48 bg-gradient-to-r from-rose-500/2 to-purple-500/2 rounded-3xl blur-xl rotate-45"
           animate={{
             x: [0, 35, 0],
             y: [0, -25, 0],
@@ -77,7 +77,7 @@ export function Footer() {
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-10 left-1/3 w-56 h-56 bg-gradient-to-r from-blue-500/2 to-cyan-500/2 rounded-full blur-2xl"
+          className="absolute bottom-10 left-1/3 w-56 h-56 bg-gradient-to-r from-rose-500/2 to-purple-500/2 rounded-full blur-2xl"
           animate={{
             x: [0, 30, 0],
             y: [0, -20, 0],
@@ -86,7 +86,7 @@ export function Footer() {
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute -bottom-16 -right-16 w-72 h-72 bg-gradient-to-r from-blue-500/3 to-cyan-500/3 rounded-full blur-3xl"
+          className="absolute -bottom-16 -right-16 w-72 h-72 bg-gradient-to-r from-rose-500/3 to-purple-500/3 rounded-full blur-3xl"
           animate={{
             x: [0, -25, 0],
             y: [0, 15, 0],
@@ -101,14 +101,14 @@ export function Footer() {
         </div>
 
         {/* Top Gradient */}
-        <div className="absolute -top-20 left-0 w-full h-40 bg-gradient-to-b from-blue-500/1 to-transparent" />
+        <div className="absolute -top-20 left-0 w-full h-40 bg-gradient-to-b from-rose-500/1 to-transparent" />
 
         {/* Floating Dots */}
         <div className="absolute inset-0">
           {Array.from({ length: 15 }, (_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 bg-blue-500/8 rounded-full"
+              className="absolute w-2 h-2 bg-rose-500/8 rounded-full"
               style={{
                 left: `${15 + (i * 5)}%`,
                 top: `${10 + (i * 4)}%`,
@@ -142,7 +142,7 @@ export function Footer() {
             >
               <div className="mb-4 sm:mb-5">
                 <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-2 sm:mb-3 tracking-tight">IMPRESSNO</h3>
-                <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-3 sm:mb-4 shadow-sm" />
+                <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full mb-3 sm:mb-4 shadow-sm" />
               </div>
               <p className="text-neutral-700 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base max-w-md">
                 Where Creativity & Strategy Meet. We create innovative software solutions that drive business growth
@@ -153,7 +153,7 @@ export function Footer() {
                   <motion.a
                     key={social.name}
                     href={social.href}
-                    className="group w-10 h-10 sm:w-12 sm:h-12 bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center text-neutral-600 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 hover:shadow-xl border border-blue-100/50 hover:border-transparent touch-target"
+                    className="group w-10 h-10 sm:w-12 sm:h-12 bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center text-neutral-600 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-purple-500 transition-all duration-300 hover:shadow-xl border border-rose-100/50 hover:border-transparent touch-target"
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 20 }}
@@ -183,7 +183,7 @@ export function Footer() {
                 >
                   <div>
                     <h4 className="font-semibold text-neutral-900 text-xs sm:text-sm uppercase tracking-wider mb-1">{category}</h4>
-                    <div className="w-6 sm:w-8 h-0.5 bg-gradient-to-r from-blue-400/60 to-cyan-400/60 rounded-full mb-3" />
+                    <div className="w-6 sm:w-8 h-0.5 bg-gradient-to-r from-rose-400/60 to-purple-400/60 rounded-full mb-3" />
                   </div>
                   <ul className="space-y-2 sm:space-y-2.5">
                     {links.map((link, linkIndex) => (
@@ -199,9 +199,9 @@ export function Footer() {
                         >
                           <span className="relative">
                             {link.name}
-                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-300 group-hover:w-full rounded-full" />
+                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-rose-500 to-purple-500 transition-all duration-300 group-hover:w-full rounded-full" />
                           </span>
-                          <ArrowUpRight size={12} className="sm:w-[14px] sm:h-[14px] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 text-blue-500" />
+                          <ArrowUpRight size={12} className="sm:w-[14px] sm:h-[14px] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 text-rose-500" />
                         </motion.a>
                       </li>
                     ))}
@@ -214,7 +214,7 @@ export function Footer() {
 
         {/* Bottom Section */}
         <motion.div
-          className="pt-4 sm:pt-6 border-t border-blue-100/50"
+          className="pt-4 sm:pt-6 border-t border-rose-100/50"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -236,7 +236,7 @@ export function Footer() {
                   viewport={{ once: true }}
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-300 group-hover:w-full rounded-full" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-rose-500 to-purple-500 transition-all duration-300 group-hover:w-full rounded-full" />
                 </motion.a>
               ))}
             </div>

@@ -54,7 +54,7 @@ export function TeamSection() {
         <Reveal>
           <div className="text-left mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-neutral-900 mb-3 sm:mb-4 font-bold leading-tight">
-              Meet Our <span className="italic font-light text-blue-600">Team</span>
+              Meet Our <span className="italic font-light text-rose-600">Team</span>
             </h2>
             <p className="text-base sm:text-lg text-neutral-600 max-w-2xl leading-relaxed">
               Our diverse team of experts brings together creativity, technical excellence, and a passion for
@@ -118,7 +118,7 @@ export function TeamSection() {
                     <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
                       <motion.a
                         href={member.social.linkedin}
-                        className="w-8 h-8 sm:w-10 sm:h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-700 hover:text-blue-600 transition-colors touch-target"
+                        className="w-8 h-8 sm:w-10 sm:h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-700 hover:text-rose-600 transition-colors touch-target"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -126,7 +126,7 @@ export function TeamSection() {
                       </motion.a>
                       <motion.a
                         href={member.social.twitter}
-                        className="w-8 h-8 sm:w-10 sm:h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-700 hover:text-blue-400 transition-colors touch-target"
+                        className="w-8 h-8 sm:w-10 sm:h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-700 hover:text-purple-400 transition-colors touch-target"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -146,7 +146,7 @@ export function TeamSection() {
                   {/* Member Info */}
                   <div className="p-4 sm:p-6">
                     <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mb-1">{member.name}</h3>
-                    <p className="text-blue-600 font-medium mb-2 sm:mb-3 text-sm sm:text-base">{member.role}</p>
+                    <p className="text-rose-600 font-medium mb-2 sm:mb-3 text-sm sm:text-base">{member.role}</p>
                     <p className="text-neutral-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">{member.bio}</p>
 
                     {/* Specialties */}

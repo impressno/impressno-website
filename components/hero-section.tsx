@@ -101,7 +101,7 @@ export function HeroSection() {
         <BlurPanel className="mx-2 sm:mx-6 mb-4 sm:mb-6 px-4 sm:px-6 py-3 sm:py-4 bg-black/24 backdrop-blur-md border-white/20 w-full max-w-4xl">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-white/90">
             <div className="flex items-center gap-2">
-              <Code className="w-4 h-4 text-blue-400 flex-shrink-0" />
+              <Code className="w-4 h-4 text-green-400 flex-shrink-0" />
               <span className="text-xs sm:text-sm">Software Solutions</span>
             </div>
             <div className="flex items-center gap-2">

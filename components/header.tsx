@@ -232,14 +232,14 @@ export function Header() {
                             e.preventDefault()
                             scrollToSection(item.href.substring(1))
                           }}
-                          className="group flex items-center px-4 py-3 text-base font-medium text-neutral-700 hover:text-neutral-900 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 rounded-xl transition-all duration-200 touch-manipulation mobile-button"
+                          className="group flex items-center px-4 py-3 text-base font-medium text-neutral-700 hover:text-neutral-900 hover:bg-gradient-to-r hover:from-rose-50 hover:to-purple-50 rounded-xl transition-all duration-200 touch-manipulation mobile-button"
                         >
                           <span className="relative">
                             {item.name}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-300 group-hover:w-full rounded-full" />
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-rose-500 to-purple-500 transition-all duration-300 group-hover:w-full rounded-full" />
                           </span>
                           <motion.span
-                            className="ml-auto text-neutral-400 group-hover:text-blue-500"
+                            className="ml-auto text-neutral-400 group-hover:text-rose-500"
                             initial={{ x: -10, opacity: 0 }}
                             whileHover={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.2 }}
