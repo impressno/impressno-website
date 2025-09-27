@@ -13,7 +13,7 @@ const services = [
     description:
       "Custom software development tailored to your business needs. From web applications to mobile apps, we create scalable solutions that drive growth.",
     backgroundImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/new-source_bloom_max_1x.jpg-t1V6yfeAZKKcEvWEkPn7Pfx7hkHDMf.jpeg",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80&fm=webp",
     features: [
       "Custom Web Applications",
       "Mobile App Development",
@@ -26,7 +26,7 @@ const services = [
     name: "Research & Innovation",
     description:
       "Cutting-edge research and development to keep your business ahead of the curve. We explore emerging technologies and innovative approaches.",
-    backgroundImage: "/lunar-gray-interior.png",
+    backgroundImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80&fm=webp",
     features: [
       "Technology Research",
       "Market Analysis",
@@ -39,7 +39,7 @@ const services = [
     name: "Societal Impact",
     description:
       "Technology solutions that create positive societal change. We focus on sustainable development and social responsibility in all our projects.",
-    backgroundImage: "/martian-red-interior.png",
+    backgroundImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80&fm=webp",
     features: [
       "Sustainable Development",
       "Social Impact Assessment",
@@ -142,7 +142,7 @@ export function ServicesBackgroundSection() {
         />
       </div>
 
-      <div className="absolute top-16 sm:top-20 lg:top-[120px] left-0 right-0 z-10 px-4 sm:px-6">
+      <div className="absolute top-24 sm:top-32 lg:top-[160px] xl:top-[180px] left-0 right-0 z-10 px-4 sm:px-6">
         <div className="container-custom text-white">
           <Reveal>
             <div>

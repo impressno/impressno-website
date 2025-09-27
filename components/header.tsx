@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { X, Menu } from "lucide-react"
+import { X, Menu, Settings, Users, Mail } from "lucide-react"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -42,9 +42,9 @@ export function Header() {
   }
 
   const navItems = [
-    { name: "Services", href: "#services-bg" },
-    { name: "About Us", href: "#about" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Services", href: "#services-bg", icon: Settings },
+    { name: "About Us", href: "#about", icon: Users },
+    { name: "Contact Us", href: "#contact", icon: Mail },
   ]
 
   return (
@@ -121,11 +121,11 @@ export function Header() {
             <div className="md:hidden z-10">
               <motion.button
                 className={cn(
-                  "relative p-2 rounded-lg transition-all duration-200 touch-manipulation mobile-button",
-                  "bg-white/10 backdrop-blur-sm border border-white/20",
+                  "relative p-3 rounded-xl transition-all duration-200 touch-manipulation mobile-button",
+                  "bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg",
                   isScrolled 
-                    ? "text-neutral-900 bg-neutral-100 border-neutral-200 hover:bg-neutral-200" 
-                    : "text-white bg-white/10 border-white/20 hover:bg-white/20"
+                    ? "text-neutral-900 bg-neutral-100 border-neutral-200 hover:bg-neutral-200 hover:shadow-xl" 
+                    : "text-white bg-white/10 border-white/20 hover:bg-white/20 hover:shadow-2xl"
                 )}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -183,7 +183,7 @@ export function Header() {
             
             {/* Menu Panel */}
             <motion.div
-              className="fixed top-0 right-0 h-full w-72 max-w-[80vw] bg-white mobile-nav-panel"
+              className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white mobile-nav-panel shadow-2xl"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -218,38 +218,70 @@ export function Header() {
 
                 {/* Navigation */}
                 <nav className="flex-1 px-4 sm:px-6 py-6 overflow-y-auto">
-                  <ul className="space-y-2">
-                    {navItems.map((item, index) => (
-                      <motion.li
-                        key={item.name}
-                        initial={{ opacity: 0, x: 30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
-                      >
-                        <a
-                          href={item.href}
-                          onClick={(e) => {
-                            e.preventDefault()
-                            scrollToSection(item.href.substring(1))
-                          }}
-                          className="group flex items-center px-4 py-3 text-base font-medium text-neutral-700 hover:text-neutral-900 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 rounded-xl transition-all duration-200 touch-manipulation mobile-button"
+                  <div className="mb-6">
+                    <h4 className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-3 px-2">Navigation</h4>
+                    <ul className="space-y-3">
+                      {navItems.map((item, index) => (
+                        <motion.li
+                          key={item.name}
+                          initial={{ opacity: 0, x: 30 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
                         >
-                          <span className="relative">
-                            {item.name}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-300 group-hover:w-full rounded-full" />
-                          </span>
-                          <motion.span
-                            className="ml-auto text-neutral-400 group-hover:text-blue-500"
-                            initial={{ x: -10, opacity: 0 }}
-                            whileHover={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.2 }}
+                          <a
+                            href={item.href}
+                            onClick={(e) => {
+                              e.preventDefault()
+                              scrollToSection(item.href.substring(1))
+                            }}
+                            className="group flex items-center px-5 py-4 text-lg font-medium text-neutral-700 hover:text-neutral-900 hover:bg-gradient-to-r hover:from-rose-50 hover:to-purple-50 rounded-xl transition-all duration-200 touch-manipulation mobile-button shadow-sm hover:shadow-md"
                           >
-                            →
-                          </motion.span>
-                        </a>
-                      </motion.li>
-                    ))}
-                  </ul>
+                            <motion.div
+                              className="mr-4 p-2 rounded-lg bg-gradient-to-r from-rose-100 to-purple-100 group-hover:from-rose-200 group-hover:to-purple-200 transition-all duration-200"
+                              whileHover={{ scale: 1.1 }}
+                            >
+                              <item.icon className="w-5 h-5 text-rose-600" />
+                            </motion.div>
+                            <span className="relative flex-1">
+                              {item.name}
+                              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-rose-500 to-purple-500 transition-all duration-300 group-hover:w-full rounded-full" />
+                            </span>
+                            <motion.span
+                              className="ml-auto text-neutral-400 group-hover:text-rose-500"
+                              initial={{ x: -10, opacity: 0 }}
+                              whileHover={{ x: 0, opacity: 1 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              →
+                            </motion.span>
+                          </a>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  {/* Quick Actions */}
+                  <div className="border-t border-neutral-100 pt-4">
+                    <h4 className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-3 px-2">Quick Actions</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      <motion.button
+                        onClick={() => scrollToSection('featured-products')}
+                        className="p-3 bg-gradient-to-r from-rose-50 to-purple-50 hover:from-rose-100 hover:to-purple-100 rounded-xl text-center transition-all duration-200 touch-target"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <div className="text-xs font-medium text-neutral-700">Core Values</div>
+                      </motion.button>
+                      <motion.button
+                        onClick={() => scrollToSection('team')}
+                        className="p-3 bg-gradient-to-r from-rose-50 to-purple-50 hover:from-rose-100 hover:to-purple-100 rounded-xl text-center transition-all duration-200 touch-target"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <div className="text-xs font-medium text-neutral-700">Our Team</div>
+                      </motion.button>
+                    </div>
+                  </div>
                 </nav>
 
                 {/* Footer */}

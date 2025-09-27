@@ -52,7 +52,7 @@ export function HeroSection() {
         transition={{ duration: 1.2, ease: [0.21, 0.47, 0.32, 0.98] }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80&fm=webp"
           alt="Impressno - Digital innovation and technology landscape"
           fill
           className="object-cover"
@@ -101,7 +101,7 @@ export function HeroSection() {
         <BlurPanel className="mx-2 sm:mx-6 mb-4 sm:mb-6 px-4 sm:px-6 py-3 sm:py-4 bg-black/24 backdrop-blur-md border-white/20 w-full max-w-4xl">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-white/90">
             <div className="flex items-center gap-2">
-              <Code className="w-4 h-4 text-blue-400 flex-shrink-0" />
+              <Code className="w-4 h-4 text-green-400 flex-shrink-0" />
               <span className="text-xs sm:text-sm">Software Solutions</span>
             </div>
             <div className="flex items-center gap-2">

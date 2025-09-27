@@ -55,7 +55,7 @@ export function ContactSection() {
   ]
 
   return (
-    <section id="contact" className="relative py-12 sm:py-16 lg:py-20 xl:py-32 bg-white overflow-hidden">
+    <section id="contact" className="relative py-4 sm:py-5 lg:py-6 bg-white overflow-hidden">
       {/* Animated Background Elements */}
       <motion.div 
         style={{ y: backgroundY }}
@@ -69,20 +69,10 @@ export function ContactSection() {
 
       <div className="container-custom relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <Reveal>
-            <motion.div
-              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-neutral-100 rounded-full text-neutral-700 text-xs sm:text-sm font-medium mb-4 sm:mb-6"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
-              Ready to connect?
-            </motion.div>
-          </Reveal>
+        <div className="text-center mb-4 sm:mb-5 lg:mb-6">
           <Reveal>
             <motion.h2 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-4 sm:mb-6"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-neutral-900 mb-3 sm:mb-4"
               whileInView={{ 
                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
@@ -92,13 +82,13 @@ export function ContactSection() {
             </motion.h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-base sm:text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-xs sm:text-sm md:text-base text-neutral-600 max-w-3xl mx-auto leading-relaxed px-4">
               Ready to transform your digital presence? Let's discuss how we can help you achieve your goals.
             </p>
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 lg:gap-5 items-stretch">
           {/* Contact Information */}
           <motion.div 
             className="relative order-2 lg:order-1"
@@ -121,23 +111,23 @@ export function ContactSection() {
               }}
             />
             
-            <div className="relative bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border border-neutral-100/50">
+            <div className="relative bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-xl border border-neutral-100/50">
               <Reveal>
-                <div className="flex items-center gap-3 mb-6 sm:mb-8">
+                <div className="flex items-center gap-3 mb-3 sm:mb-4">
                   <motion.div 
-                    className="w-10 h-10 sm:w-12 sm:h-12 bg-neutral-900 rounded-lg sm:rounded-xl flex items-center justify-center"
+                    className="w-5 h-5 sm:w-6 sm:h-6 bg-neutral-900 rounded-lg flex items-center justify-center"
                     whileHover={{ rotate: 5, scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                    <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
                   </motion.div>
-                  <h3 className="text-lg sm:text-2xl font-bold text-neutral-900">
+                  <h3 className="text-base sm:text-lg font-bold text-neutral-900">
                     Let's Start a Conversation
                   </h3>
                 </div>
               </Reveal>
               <Reveal delay={0.1}>
-                <p className="text-sm sm:text-base text-neutral-600 mb-6 sm:mb-8 leading-relaxed">
+                <p className="text-xs text-neutral-600 mb-3 sm:mb-4 leading-relaxed">
                   Whether you need a custom software solution, want to explore innovative research opportunities, 
                   or are looking to create positive societal impact through technology, we're here to help.
                 </p>
@@ -148,7 +138,7 @@ export function ContactSection() {
                   <motion.a
                     key={info.title}
                     href={info.link}
-                    className="relative group block p-4 sm:p-6 rounded-lg sm:rounded-xl bg-neutral-50/80 hover:bg-neutral-100/80 transition-all duration-300 border border-neutral-200/50 overflow-hidden touch-target"
+                    className="relative group block p-2.5 sm:p-3 rounded-lg sm:rounded-xl bg-neutral-50/80 hover:bg-neutral-100/80 transition-all duration-300 border border-neutral-200/50 overflow-hidden touch-target"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
@@ -163,11 +153,11 @@ export function ContactSection() {
                     
                     <div className="relative flex items-center space-x-3 sm:space-x-4">
                       <motion.div 
-                        className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-neutral-900 rounded-lg flex items-center justify-center group-hover:bg-neutral-800 transition-colors shadow-md"
+                        className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-neutral-900 rounded-lg flex items-center justify-center group-hover:bg-neutral-800 transition-colors shadow-md"
                         whileHover={{ rotate: 5 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >
-                        <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                        <info.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </motion.div>
                       <div className="flex-1 min-w-0">
                         <h4 className="font-semibold text-sm sm:text-base text-neutral-900 mb-1 group-hover:text-neutral-800 transition-colors">
@@ -175,7 +165,7 @@ export function ContactSection() {
                         </h4>
                         <p className="text-neutral-600 text-xs sm:text-sm break-all">{info.content}</p>
                       </div>
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-neutral-400 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0" />
+                      <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-neutral-400 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0" />
                     </div>
                   </motion.a>
                 ))}
@@ -206,33 +196,33 @@ export function ContactSection() {
               }}
             />
             
-            <div className="relative bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-2xl border border-neutral-100/50">
+            <div className="relative bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2.5 sm:p-3 shadow-2xl border border-neutral-100/50">
               <motion.div
-                className="flex items-center gap-3 mb-6 sm:mb-8"
+                className="flex items-center gap-3 mb-3 sm:mb-4"
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
                 <motion.div 
-                  className="w-8 h-8 sm:w-10 sm:h-10 bg-neutral-900 rounded-lg flex items-center justify-center"
+                  className="w-6 h-6 sm:w-8 sm:h-8 bg-neutral-900 rounded-lg flex items-center justify-center"
                   whileHover={{ rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Send className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                  <Send className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
                 </motion.div>
-                <h3 className="text-lg sm:text-xl font-bold text-neutral-900">Send us a message</h3>
+                <h3 className="text-base sm:text-lg font-bold text-neutral-900">Send us a message</h3>
               </motion.div>
 
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <form onSubmit={handleSubmit} className="space-y-1.5 sm:space-y-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     viewport={{ once: true }}
                   >
-                    <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
+                    <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-neutral-700 mb-1 sm:mb-1.5">
                       Name *
                     </label>
                     <motion.input
@@ -242,7 +232,7 @@ export function ContactSection() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-neutral-300 rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-sm focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-300 hover:border-neutral-400 placeholder-neutral-400 text-sm sm:text-base"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 border border-neutral-300 rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-sm focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-300 hover:border-neutral-400 placeholder-neutral-400 text-sm sm:text-base"
                       placeholder="Your name"
                       whileFocus={{ scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 300 }}
@@ -254,7 +244,7 @@ export function ContactSection() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                     viewport={{ once: true }}
                   >
-                    <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
+                    <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-neutral-700 mb-1 sm:mb-1.5">
                       Email *
                     </label>
                     <motion.input
@@ -264,7 +254,7 @@ export function ContactSection() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-neutral-300 rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-sm focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-300 hover:border-neutral-400 placeholder-neutral-400 text-sm sm:text-base"
+                      className="w-full px-3 sm:px-4 py-1.5 sm:py-2 border border-neutral-300 rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-sm focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-300 hover:border-neutral-400 placeholder-neutral-400 text-sm sm:text-base"
                       placeholder="your@email.com"
                       whileFocus={{ scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 300 }}
@@ -272,14 +262,14 @@ export function ContactSection() {
                   </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.6 }}
                     viewport={{ once: true }}
                   >
-                    <label htmlFor="company" className="block text-xs sm:text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
+                    <label htmlFor="company" className="block text-xs sm:text-sm font-medium text-neutral-700 mb-1 sm:mb-1.5">
                       Company
                     </label>
                     <motion.input
@@ -288,7 +278,7 @@ export function ContactSection() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-neutral-300 rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-sm focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-300 hover:border-neutral-400 placeholder-neutral-400 text-sm sm:text-base"
+                      className="w-full px-3 sm:px-4 py-1.5 sm:py-2 border border-neutral-300 rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-sm focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-300 hover:border-neutral-400 placeholder-neutral-400 text-sm sm:text-base"
                       placeholder="Your company"
                       whileFocus={{ scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 300 }}
@@ -300,7 +290,7 @@ export function ContactSection() {
                     transition={{ duration: 0.6, delay: 0.7 }}
                     viewport={{ once: true }}
                   >
-                    <label htmlFor="service" className="block text-xs sm:text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
+                    <label htmlFor="service" className="block text-xs sm:text-sm font-medium text-neutral-700 mb-1 sm:mb-1.5">
                       Service Interest
                     </label>
                     <motion.select
@@ -308,7 +298,7 @@ export function ContactSection() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-neutral-300 rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-sm focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-300 hover:border-neutral-400 text-sm sm:text-base"
+                      className="w-full px-3 sm:px-4 py-1.5 sm:py-2 border border-neutral-300 rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-sm focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-300 hover:border-neutral-400 text-sm sm:text-base"
                       whileFocus={{ scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
@@ -327,17 +317,17 @@ export function ContactSection() {
                   transition={{ duration: 0.6, delay: 0.8 }}
                   viewport={{ once: true }}
                 >
-                  <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-neutral-700 mb-1.5 sm:mb-2">
+                  <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-neutral-700 mb-1 sm:mb-1.5">
                     Message *
                   </label>
                   <motion.textarea
                     id="message"
                     name="message"
                     required
-                    rows={4}
+                    rows={2}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-neutral-300 rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-sm focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-300 hover:border-neutral-400 resize-none placeholder-neutral-400 text-sm sm:text-base"
+                    className="w-full px-3 sm:px-4 py-1.5 sm:py-2 border border-neutral-300 rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-sm focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all duration-300 hover:border-neutral-400 resize-none placeholder-neutral-400 text-sm sm:text-base"
                     placeholder="Tell us about your project and how we can help you achieve your goals..."
                     whileFocus={{ scale: 1.01 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -346,7 +336,7 @@ export function ContactSection() {
 
                 <motion.button
                   type="submit"
-                  className="relative w-full bg-neutral-900 text-white py-3 sm:py-4 px-4 sm:px-6 rounded-lg sm:rounded-xl font-medium overflow-hidden group transition-all duration-300 shadow-lg hover:shadow-xl touch-target text-sm sm:text-base"
+                  className="relative w-full bg-neutral-900 text-white py-2 sm:py-2.5 px-4 sm:px-6 rounded-lg sm:rounded-xl font-medium overflow-hidden group transition-all duration-300 shadow-lg hover:shadow-xl touch-target text-sm sm:text-base"
                   whileHover={{ 
                     scale: 1.02,
                     transition: { type: "spring", stiffness: 300 }
@@ -379,7 +369,7 @@ export function ContactSection() {
                           animate={{ scale: 1 }}
                           transition={{ type: "spring", stiffness: 500 }}
                         >
-                          <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                          <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                         </motion.div>
                         <span>Message Sent Successfully!</span>
                       </>
@@ -389,7 +379,7 @@ export function ContactSection() {
                           animate={{ x: isHovering ? 2 : 0 }}
                           transition={{ type: "spring", stiffness: 300 }}
                         >
-                          <Send className="w-4 h-4 sm:w-5 sm:h-5" />
+                          <Send className="w-3 h-3 sm:w-4 sm:h-4" />
                         </motion.div>
                         <span>Send Message</span>
                         <motion.div
@@ -399,7 +389,7 @@ export function ContactSection() {
                           }}
                           transition={{ type: "spring", stiffness: 300 }}
                         >
-                          <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                          <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                         </motion.div>
                       </>
                     )}

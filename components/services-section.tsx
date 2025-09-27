@@ -11,8 +11,8 @@ const services = [
     description: "Custom software development tailored to your business needs. From web applications to mobile apps, we create scalable solutions that drive growth.",
     icon: Code,
     features: ["Custom Web Applications", "Mobile App Development", "API Integration", "Cloud Solutions"],
-    color: "blue",
-    gradient: "from-blue-500 to-cyan-500",
+    color: "rose",
+    gradient: "from-rose-500 to-purple-500",
   },
   {
     id: "research",
