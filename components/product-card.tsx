@@ -60,6 +60,7 @@ export function ProductCard({ product, onQuickLook }: ProductCardProps) {
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="lazy"
             />
           </motion.div>
         </div>
@@ -91,8 +92,12 @@ export function ProductCard({ product, onQuickLook }: ProductCardProps) {
         <div className="relative z-10">
           <div>
             <h3 className="text-lg font-semibold text-white mb-1 drop-shadow-sm">{product.name}</h3>
-            <p className="text-sm text-white/90 mb-2 drop-shadow-sm">{product.materials.join(", ")}</p>
-            {/* Removed pricing for core values cards */}
+            {product.dimensions && (
+              <p className="text-sm text-white/80 mb-2 drop-shadow-sm font-medium">{product.dimensions}</p>
+            )}
+            <p className="text-sm text-white/90 leading-relaxed drop-shadow-sm line-clamp-3">
+              {product.materials.join(" ")}
+            </p>
           </div>
         </div>
       </div>

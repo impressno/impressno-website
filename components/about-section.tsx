@@ -1,21 +1,11 @@
 "use client"
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
+import { motion } from "framer-motion"
 import Image from "next/image"
 import { Target, Lightbulb, Heart, Recycle } from "lucide-react"
 import { Reveal } from "./reveal"
 
 export function AboutSection() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  })
-
-  const imageY = useTransform(scrollYProgress, [0, 1], [0, -100])
-  const textY = useTransform(scrollYProgress, [0, 1], [0, 50])
-
   const values = [
     {
       icon: Target,
@@ -40,7 +30,7 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" ref={containerRef} className="pt-6 pb-8 sm:pt-8 sm:pb-12 lg:pt-12 lg:pb-16 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden">
+    <section id="about" className="pt-6 pb-8 sm:pt-8 sm:pb-12 lg:pt-12 lg:pb-16 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-8 -left-32 w-48 h-48 lg:w-64 lg:h-64 bg-gradient-to-r from-rose-500/5 to-purple-500/5 rounded-full blur-3xl" />
@@ -52,7 +42,7 @@ export function AboutSection() {
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 xl:gap-12 items-stretch mb-8 sm:mb-12 lg:mb-16">
           {/* Text Content */}
-          <motion.div style={{ y: textY }} className="order-2 lg:order-1 flex flex-col justify-center">
+          <div className="order-2 lg:order-1 flex flex-col justify-center">
             <Reveal>
               <div className="mb-3 lg:mb-4">
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 mb-2 lg:mb-3 leading-tight">
@@ -91,19 +81,19 @@ export function AboutSection() {
                 </motion.button>
               </div>
             </Reveal>
-          </motion.div>
+          </div>
 
           {/* Enhanced Image with overlays */}
-          <motion.div
+          <div
             className="relative h-[240px] sm:h-[280px] lg:h-full min-h-[300px] rounded-lg lg:rounded-xl overflow-hidden group order-1 lg:order-2"
-            style={{ y: imageY }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&fm=webp"
               alt="Team collaboration and innovation"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-rose-600/10 to-purple-600/10" />
@@ -118,7 +108,7 @@ export function AboutSection() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-white font-bold text-xs sm:text-sm">50+</div>
+                  <div className="text-white font-bold text-xs sm:text-sm">5+</div>
                   <div className="text-white/80 text-xs">Projects</div>
                 </motion.div>
                 <motion.div
@@ -128,7 +118,7 @@ export function AboutSection() {
                   transition={{ duration: 0.6, delay: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-white font-bold text-xs sm:text-sm">25+</div>
+                  <div className="text-white font-bold text-xs sm:text-sm">5+</div>
                   <div className="text-white/80 text-xs">Clients</div>
                 </motion.div>
                 <motion.div
@@ -138,12 +128,12 @@ export function AboutSection() {
                   transition={{ duration: 0.6, delay: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-white font-bold text-xs sm:text-sm">5+</div>
+                  <div className="text-white font-bold text-xs sm:text-sm">2+</div>
                   <div className="text-white/80 text-xs">Years</div>
                 </motion.div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
 

@@ -129,9 +129,9 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="container-custom py-8 sm:py-12 lg:py-16 relative z-10">
+      <div className="container-custom py-4 sm:py-5 lg:py-6 relative z-10">
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 mb-8 sm:mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-4 lg:gap-5 mb-4 sm:mb-5">
           {/* Brand Section */}
           <div className="lg:col-span-5">
             <motion.div
@@ -140,11 +140,11 @@ export function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="mb-4 sm:mb-5">
-                <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-2 sm:mb-3 tracking-tight">IMPRESSNO</h3>
-                <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full mb-3 sm:mb-4 shadow-sm" />
+              <div className="mb-3 sm:mb-4">
+                <h3 className="text-base sm:text-lg font-bold text-neutral-900 mb-1.5 tracking-tight">IMPRESSNO</h3>
+                <div className="w-8 sm:w-10 h-1 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full mb-1.5 sm:mb-2 shadow-sm" />
               </div>
-              <p className="text-neutral-700 mb-4 sm:mb-5 leading-relaxed text-sm sm:text-base max-w-md">
+              <p className="text-neutral-700 mb-2 sm:mb-3 leading-relaxed text-xs sm:text-sm max-w-md">
                 Where Creativity & Strategy Meet. We create innovative software solutions that drive business growth
                 while making a positive societal impact.
               </p>
@@ -153,7 +153,7 @@ export function Footer() {
                   <motion.a
                     key={social.name}
                     href={social.href}
-                    className="group w-10 h-10 sm:w-12 sm:h-12 bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center text-neutral-600 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-purple-500 transition-all duration-300 hover:shadow-xl border border-rose-100/50 hover:border-transparent touch-target"
+                    className="group w-8 h-8 sm:w-10 sm:h-10 bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center text-neutral-600 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-purple-500 transition-all duration-300 hover:shadow-xl border border-rose-100/50 hover:border-transparent touch-target"
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 20 }}
@@ -161,7 +161,7 @@ export function Footer() {
                     transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <social.icon size={18} className="sm:w-5 sm:h-5 transition-all duration-300" />
+                    <social.icon size={14} className="sm:w-4 sm:h-4 transition-all duration-300" />
                     <span className="sr-only">Follow us on {social.name}</span>
                   </motion.a>
                 ))}
@@ -171,7 +171,7 @@ export function Footer() {
 
           {/* Links Sections */}
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-4 lg:gap-5">
               {Object.entries(footerLinks).map(([category, links], index) => (
                 <motion.div
                   key={category}
@@ -182,10 +182,10 @@ export function Footer() {
                   className="space-y-3"
                 >
                   <div>
-                    <h4 className="font-semibold text-neutral-900 text-xs sm:text-sm uppercase tracking-wider mb-1">{category}</h4>
-                    <div className="w-6 sm:w-8 h-0.5 bg-gradient-to-r from-rose-400/60 to-purple-400/60 rounded-full mb-3" />
+                    <h4 className="font-semibold text-neutral-900 text-xs uppercase tracking-wider mb-1">{category}</h4>
+                    <div className="w-4 sm:w-6 h-0.5 bg-gradient-to-r from-rose-400/60 to-purple-400/60 rounded-full mb-2" />
                   </div>
-                  <ul className="space-y-2 sm:space-y-2.5">
+                  <ul className="space-y-1 sm:space-y-1.5">
                     {links.map((link, linkIndex) => (
                       <li key={link.name}>
                         <motion.a
@@ -214,7 +214,7 @@ export function Footer() {
 
         {/* Bottom Section */}
         <motion.div
-          className="pt-4 sm:pt-6 border-t border-rose-100/50"
+          className="pt-3 sm:pt-4 border-t border-rose-100/50"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
