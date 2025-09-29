@@ -12,8 +12,7 @@ const services = [
     name: "Software Solutions",
     description:
       "Custom software development tailored to your business needs. From web applications to mobile apps, we create scalable solutions that drive growth.",
-    backgroundImage:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80&fm=webp",
+    backgroundImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80&fm=webp",
     features: [
       "Custom Web Applications",
       "Mobile App Development",
@@ -39,7 +38,8 @@ const services = [
     name: "Societal Impact",
     description:
       "Technology solutions that create positive societal change. We focus on sustainable development and social responsibility in all our projects.",
-    backgroundImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80&fm=webp",
+    backgroundImage:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80&fm=webp",
     features: [
       "Sustainable Development",
       "Social Impact Assessment",
@@ -100,7 +100,7 @@ export function ServicesBackgroundSection() {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      id="services-bg"
+      id="services"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
