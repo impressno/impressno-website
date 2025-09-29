@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Impressno — Where Creativity & Strategy Meet",
   description: "Sustainable model for tailoring apps to the needs of customers, managing their digital footprints.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+  },
   alternates: {
     canonical: "https://impressno.com/",
   },
