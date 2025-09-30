@@ -42,10 +42,10 @@ export function HeroSection() {
   }
 
   return (
-    <section ref={containerRef} className="relative h-screen overflow-hidden">
+    <section ref={containerRef} className="relative h-screen overflow-hidden w-full">
       {/* Background Image with Cinematic Effects */}
       <motion.div
-        className="absolute inset-0"
+        className="absolute inset-0 w-full h-full"
         style={{ scale: imageScale, y: imageY }}
         initial={{ scale: 1.05 }}
         animate={{ scale: 1 }}

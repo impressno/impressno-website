@@ -36,9 +36,9 @@ export function Footer() {
   ]
 
   return (
-    <footer className="relative bg-white">
+    <footer className="relative bg-white w-full">
       {/* Simplified Background Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <motion.div
           className="absolute -top-32 -left-20 w-80 h-80 bg-gradient-to-r from-rose-500/2 to-purple-500/2 rounded-full blur-3xl"
           animate={{

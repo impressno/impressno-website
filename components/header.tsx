@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { X, Menu, Settings, Users, Mail, Package, Award } from "lucide-react"
+import { X, Menu, Settings, Users, Mail } from "lucide-react"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -51,7 +51,7 @@ export function Header() {
     <>
       <motion.header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full",
           "backdrop-blur-md border-b border-white/[0.02]",
           isScrolled ? "bg-white/90" : "bg-black/20",
         )}
@@ -59,8 +59,8 @@ export function Header() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
       >
-        <div className="container-custom">
-          <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20 relative">
+        <div className="container-custom w-full max-w-full">
+          <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20 relative w-full">
             {/* Logo */}
             <motion.div className="flex-shrink-0 z-10" whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
               <a
@@ -118,7 +118,7 @@ export function Header() {
             </nav>
 
             {/* Mobile menu button */}
-            <div className="md:hidden z-10">
+            <div className="md:hidden z-10 flex-shrink-0">
               <motion.button
                 className={cn(
                   "relative p-3 rounded-xl transition-all duration-200 touch-manipulation mobile-button",
@@ -183,7 +183,7 @@ export function Header() {
 
             {/* Menu Panel */}
             <motion.div
-              className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white mobile-nav-panel shadow-2xl"
+              className="fixed top-0 right-0 h-full w-[min(320px,85vw)] max-w-[85vw] bg-white mobile-nav-panel shadow-2xl overflow-hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}

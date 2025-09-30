@@ -13,18 +13,20 @@ import { CollectionStrip } from "@/components/collection-strip"
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen flex flex-col w-full overflow-x-hidden">
       <Header />
-      <HeroSection />
-      <StatsSection />
-      <ServicesBackgroundSection />
-      <FeaturedProducts />
-      <TeamSection />
-      <ContactSection />
+      <main className="flex-1 w-full">
+        <HeroSection />
+        <StatsSection />
+        <ServicesBackgroundSection />
+        <FeaturedProducts />
+        <TeamSection />
+        <ContactSection />
+      </main>
       <Footer />
       {/* <ServicesSection /> */}
       {/* <CollectionStrip /> */}
       {/* <NewsletterSection /> */}
-    </main>
+    </div>
   )
 }
