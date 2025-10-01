@@ -20,7 +20,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-8 sm:py-12 lg:py-16 bg-white">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-neutral-50">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12">

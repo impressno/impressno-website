@@ -36,7 +36,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="relative bg-white w-full">
+    <footer className="relative bg-neutral-50 w-full">
       {/* Simplified Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
