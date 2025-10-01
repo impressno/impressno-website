@@ -64,17 +64,20 @@ export function ServicesSection() {
               transition={{ duration: 0.8, delay: index * 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
               viewport={{ once: true }}
             >
-              <div className="relative bg-white rounded-2xl p-8 lg:p-10 shadow-lg border border-neutral-100 hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
+              <div className="relative bg-white rounded-2xl p-8 lg:p-10 shadow-lg border border-neutral-100 hover:shadow-xl transition-all duration-500 group-hover:-translate-y-3 group-hover:shadow-2xl overflow-hidden">
+                {/* Subtle hover background effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/0 to-neutral-100/0 group-hover:from-neutral-50/50 group-hover:to-neutral-100/20 transition-all duration-500 rounded-2xl"></div>
+                
                 {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${service.gradient} mb-6`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className={`relative z-10 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${service.gradient} mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+                  <service.icon className="w-8 h-8 text-white transition-transform duration-300 group-hover:scale-110" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-neutral-900 mb-4">
+                <h3 className="relative z-10 text-2xl font-bold text-neutral-900 mb-4 transition-colors duration-300 group-hover:text-neutral-800">
                   {service.title}
                 </h3>
-                <p className="text-neutral-600 mb-6 leading-relaxed">
+                <p className="relative z-10 text-neutral-600 mb-6 leading-relaxed transition-colors duration-300 group-hover:text-neutral-700">
                   {service.description}
                 </p>
 

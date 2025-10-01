@@ -115,7 +115,18 @@ export function StatsSection() {
               viewport={{ once: true }}
               whileHover={{ y: -12, scale: 1.02 }}
             >
-              <div className="bg-white/80 backdrop-blur-lg border border-neutral-200/50 rounded-3xl p-6 sm:p-7 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-500 group-hover:border-neutral-300/70 relative overflow-hidden">
+              <motion.div 
+                className="bg-white/80 backdrop-blur-lg border border-neutral-200/50 rounded-3xl p-6 sm:p-7 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-500 group-hover:border-neutral-300/70 relative overflow-hidden"
+                animate={{ 
+                  y: [0, -8, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  delay: index * 0.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
                 
                 {/* Subtle gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/0 to-neutral-100/0 group-hover:from-neutral-50/50 group-hover:to-neutral-100/20 transition-all duration-500 rounded-3xl"></div>
@@ -142,7 +153,7 @@ export function StatsSection() {
 
                 {/* Subtle corner decoration */}
                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-neutral-100/30 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>

@@ -102,7 +102,7 @@ export function Header() {
                     scrollToSection(item.href.substring(1))
                   }}
                   className={cn(
-                    "text-sm lg:text-base font-medium transition-colors duration-200",
+                    "text-sm lg:text-base font-medium transition-all duration-300 relative group px-3 py-2",
                     isScrolled
                       ? "text-neutral-700 hover:text-neutral-900"
                       : "text-white/90 hover:text-white"
@@ -110,9 +110,17 @@ export function Header() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 + index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  {item.name}
+                  <span className="relative z-10">{item.name}</span>
+                  <motion.div
+                    className={cn(
+                      "absolute bottom-0 left-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-3/4",
+                      isScrolled ? "bg-neutral-900" : "bg-white"
+                    )}
+                    style={{ transform: 'translateX(-50%)' }}
+                  />
                 </motion.a>
               ))}
             </nav>

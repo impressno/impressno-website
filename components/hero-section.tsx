@@ -100,18 +100,45 @@ export function HeroSection() {
       >
         <BlurPanel className="mx-2 sm:mx-6 mb-4 sm:mb-6 px-4 sm:px-6 py-3 sm:py-4 bg-black/24 backdrop-blur-md border-white/20 w-full max-w-4xl">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-white/90">
-            <div className="flex items-center gap-2">
-              <Code className="w-4 h-4 text-green-400 flex-shrink-0" />
-              <span className="text-xs sm:text-sm">Software Solutions</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Search className="w-4 h-4 text-green-400 flex-shrink-0" />
-              <span className="text-xs sm:text-sm">Research & Innovation</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-purple-400 flex-shrink-0" />
-              <span className="text-xs sm:text-sm">Societal Impact</span>
-            </div>
+            <motion.div 
+              className="flex items-center gap-2 group cursor-default"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+              >
+                <Code className="w-4 h-4 text-green-400 flex-shrink-0 transition-colors group-hover:text-green-300" />
+              </motion.div>
+              <span className="text-xs sm:text-sm transition-colors group-hover:text-white">Software Solutions</span>
+            </motion.div>
+            <motion.div 
+              className="flex items-center gap-2 group cursor-default"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+              >
+                <Search className="w-4 h-4 text-green-400 flex-shrink-0 transition-colors group-hover:text-green-300" />
+              </motion.div>
+              <span className="text-xs sm:text-sm transition-colors group-hover:text-white">Research & Innovation</span>
+            </motion.div>
+            <motion.div 
+              className="flex items-center gap-2 group cursor-default"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+              >
+                <Users className="w-4 h-4 text-purple-400 flex-shrink-0 transition-colors group-hover:text-purple-300" />
+              </motion.div>
+              <span className="text-xs sm:text-sm transition-colors group-hover:text-white">Societal Impact</span>
+            </motion.div>
           </div>
         </BlurPanel>
       </motion.div>

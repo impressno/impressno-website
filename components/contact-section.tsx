@@ -43,12 +43,21 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-neutral-100"
+            className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-neutral-100 hover:shadow-lg transition-all duration-300 group"
+            whileHover={{ y: -5, scale: 1.02 }}
           >
             <div className="text-center">
-              <div className="w-16 h-16 bg-neutral-900 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Mail className="w-8 h-8 text-white" />
-              </div>
+              <motion.div 
+                className="w-16 h-16 bg-neutral-900 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-300 group-hover:bg-neutral-800 group-hover:scale-110"
+                whileHover={{ rotate: 5 }}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: -5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Mail className="w-8 h-8 text-white" />
+                </motion.div>
+              </motion.div>
 
               <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mb-2">
                 Contact Us
@@ -59,14 +68,16 @@ export function ContactSection() {
               </p>
 
               {/* Email with Copy Button */}
-              <div className="border border-neutral-200 rounded-lg px-3 py-2 mb-4 bg-white/50 backdrop-blur-sm">
+              <div className="border border-neutral-200 rounded-lg px-3 py-2 mb-4 bg-white/50 backdrop-blur-sm hover:border-neutral-300 transition-all duration-300 group/email">
                 <div className="flex items-center justify-between gap-2">
-                  <a
+                  <motion.a
                     href={`mailto:${email}`}
-                    className="text-neutral-900 font-medium hover:text-neutral-700 transition-colors flex-1 min-w-0"
+                    className="text-neutral-900 font-medium hover:text-neutral-700 transition-colors flex-1 min-w-0 group-hover/email:text-neutral-800"
+                    whileHover={{ x: 2 }}
+                    transition={{ duration: 0.2 }}
                   >
                     {email}
-                  </a>
+                  </motion.a>
                   <motion.button
                     onClick={handleCopyEmail}
                     className="p-2 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white transition-all duration-300 group relative overflow-hidden flex-shrink-0"
