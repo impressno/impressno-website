@@ -7,7 +7,7 @@ import { Reveal } from "./reveal"
 
 export function ContactSection() {
   const [isCopied, setIsCopied] = useState(false)
-  const email = "ceo@impressno.com"
+  const email = "ceo@impressno.in"
 
   const handleCopyEmail = async () => {
     try {
@@ -20,7 +20,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-neutral-50">
+    <section id="contact" className="py-8 sm:py-12 lg:py-16 bg-neutral-50">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12">
@@ -59,37 +59,88 @@ export function ContactSection() {
               </p>
 
               {/* Email with Copy Button */}
-              <div className="bg-neutral-50 rounded-xl p-4 mb-4">
-                <div className="flex items-center justify-between">
+              <div className="border border-neutral-200 rounded-lg px-3 py-2 mb-4 bg-white/50 backdrop-blur-sm">
+                <div className="flex items-center justify-between gap-2">
                   <a
                     href={`mailto:${email}`}
-                    className="text-neutral-900 font-medium hover:text-neutral-700 transition-colors"
+                    className="text-neutral-900 font-medium hover:text-neutral-700 transition-colors flex-1 min-w-0"
                   >
                     {email}
                   </a>
-                  <button
+                  <motion.button
                     onClick={handleCopyEmail}
-                    className="ml-3 p-2 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white transition-all duration-300 group"
+                    className="p-2 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white transition-all duration-300 group relative overflow-hidden flex-shrink-0"
                     title="Copy email address"
+                    initial={{ 
+                      backgroundColor: "#171717",
+                      scale: 1,
+                      rotate: 0
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)"
+                    }}
+                    whileTap={{ 
+                      scale: 0.95,
+                      boxShadow: "0 5px 15px rgba(0, 0, 0, 0.1)"
+                    }}
+                    animate={isCopied ? {
+                      backgroundColor: "#22c55e",
+                      scale: [1, 1.1, 1],
+                      rotate: [0, 5, -5, 0]
+                    } : {
+                      backgroundColor: "#171717",
+                      scale: 1,
+                      rotate: 0
+                    }}
+                    transition={{ 
+                      duration: 0.3,
+                      ease: "easeInOut"
+                    }}
                   >
-                    {isCopied ? (
-                      <CheckCircle className="w-4 h-4" />
-                    ) : (
-                      <Copy className="w-4 h-4" />
-                    )}
-                  </button>
+                    {/* Ripple effect */}
+                    <motion.div
+                      className="absolute inset-0 bg-white/20 rounded-lg"
+                      initial={{ scale: 0, opacity: 0.8 }}
+                      animate={isCopied ? { 
+                        scale: [0, 1.5], 
+                        opacity: [0.8, 0] 
+                      } : { scale: 0, opacity: 0 }}
+                      transition={{ duration: 0.6 }}
+                    />
+                    
+                    {/* Icon with animation */}
+                    <motion.div
+                      animate={isCopied ? { 
+                        rotate: [0, 360],
+                        scale: [1, 1.2, 1]
+                      } : {}}
+                      transition={{ duration: 0.5 }}
+                    >
+                      {isCopied ? (
+                        <CheckCircle className="w-4 h-4" />
+                      ) : (
+                        <Copy className="w-4 h-4" />
+                      )}
+                    </motion.div>
+                  </motion.button>
                 </div>
               </div>
 
-              {isCopied && (
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-sm text-green-600 font-medium"
-                >
-                  Email copied to clipboard!
-                </motion.p>
-              )}
+              {/* Fixed height container to prevent layout shift */}
+              <div className="h-6 flex items-center justify-center">
+                {isCopied && (
+                  <motion.p
+                    initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.9 }}
+                    className="text-sm text-green-600 font-medium"
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                  >
+                    Email copied to clipboard!
+                  </motion.p>
+                )}
+              </div>
             </div>
           </motion.div>
         </div>

@@ -50,7 +50,7 @@ const teamMembers = [
 
 export function TeamSection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-neutral-50" id="team">
+    <section className="py-12 sm:py-16 lg:py-16 bg-neutral-50" id="team">
       <div className="container-custom">
         {/* Section Header */}
         <div className="max-w-4xl mx-auto text-center mb-10 lg:mb-12">
