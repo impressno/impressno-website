@@ -70,7 +70,7 @@ export function Footer() {
             >
               <div className="mb-3 sm:mb-4">
                 <h3 className="text-base sm:text-lg font-bold text-neutral-900 mb-1.5 tracking-tight">IMPRESSNO</h3>
-                <div className="w-8 sm:w-10 h-1 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full mb-1.5 sm:mb-2 shadow-sm" />
+                <div className="w-8 sm:w-10 h-1 bg-neutral-900 rounded-full mb-1.5 sm:mb-2 shadow-sm" />
               </div>
               <p className="text-neutral-700 mb-2 sm:mb-3 leading-relaxed text-xs sm:text-sm max-w-md">
                 Where Creativity & Strategy Meet. We create innovative software solutions that drive business growth
@@ -81,7 +81,7 @@ export function Footer() {
                   <motion.a
                     key={social.name}
                     href={social.href}
-                    className="group w-8 h-8 sm:w-10 sm:h-10 bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center text-neutral-600 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-purple-500 transition-all duration-300 hover:shadow-xl border border-rose-100/50 hover:border-transparent touch-target"
+                    className="group w-8 h-8 sm:w-10 sm:h-10 bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center text-neutral-600 hover:text-white hover:bg-neutral-900 transition-all duration-300 hover:shadow-xl border border-neutral-200 hover:border-neutral-900 touch-target"
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 20 }}
@@ -111,7 +111,7 @@ export function Footer() {
                 >
                   <div>
                     <h4 className="font-semibold text-neutral-900 text-xs uppercase tracking-wider mb-1">{category}</h4>
-                    <div className="w-4 sm:w-6 h-0.5 bg-gradient-to-r from-rose-400/60 to-purple-400/60 rounded-full mb-2" />
+                    <div className="w-4 sm:w-6 h-0.5 bg-neutral-900 rounded-full mb-2" />
                   </div>
                   <ul className="space-y-1 sm:space-y-1.5">
                     {links.map((link, linkIndex) => (
@@ -127,9 +127,9 @@ export function Footer() {
                         >
                           <span className="relative">
                             {link.name}
-                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-rose-500 to-purple-500 transition-all duration-300 group-hover:w-full rounded-full" />
+                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neutral-900 transition-all duration-300 group-hover:w-full rounded-full" />
                           </span>
-                          <ArrowUpRight size={12} className="sm:w-[14px] sm:h-[14px] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 text-rose-500" />
+                          <ArrowUpRight size={12} className="sm:w-[14px] sm:h-[14px] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 text-neutral-900" />
                         </motion.a>
                       </li>
                     ))}
@@ -142,7 +142,7 @@ export function Footer() {
 
         {/* Bottom Section */}
         <motion.div
-          className="pt-3 sm:pt-4 border-t border-rose-100/50"
+          className="pt-3 sm:pt-4 border-t border-neutral-200"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -164,7 +164,7 @@ export function Footer() {
                   viewport={{ once: true }}
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-rose-500 to-purple-500 transition-all duration-300 group-hover:w-full rounded-full" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-neutral-900 transition-all duration-300 group-hover:w-full rounded-full" />
                 </motion.a>
               ))}
             </div>

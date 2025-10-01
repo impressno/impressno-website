@@ -56,7 +56,7 @@ export function TeamSection() {
         <div className="max-w-4xl mx-auto text-center mb-10 lg:mb-12">
           <Reveal>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
-              Meet Our <span className="italic font-light text-rose-600">Team</span>
+              Meet Our <span className="italic font-light text-neutral-700">Team</span>
             </h2>
             <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
               Meet the people behind our success. Our leadership team combines decades of industry experience with a passion for innovation and excellence.
@@ -94,7 +94,7 @@ export function TeamSection() {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="absolute -bottom-3 -right-3 w-10 h-10 bg-white rounded-xl shadow-lg border border-neutral-200 flex items-center justify-center text-neutral-600 hover:text-rose-600 hover:border-rose-200 transition-all duration-300"
+                        className="absolute -bottom-3 -right-3 w-10 h-10 bg-white rounded-xl shadow-lg border border-neutral-200 flex items-center justify-center text-neutral-600 hover:text-white hover:bg-neutral-900 hover:border-neutral-900 transition-all duration-300"
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -105,7 +105,7 @@ export function TeamSection() {
                     {/* Member Info */}
                     <div>
                       <h3 className="text-xl lg:text-2xl font-bold text-neutral-900 mb-2">{member.name}</h3>
-                      <p className="text-rose-600 font-semibold text-base lg:text-lg mb-4">{member.role}</p>
+                      <p className="text-neutral-800 font-semibold text-base lg:text-lg mb-4">{member.role}</p>
                       <p className="text-neutral-600 text-sm lg:text-base leading-relaxed max-w-sm mx-auto">
                         {member.bio}
                       </p>
@@ -122,7 +122,7 @@ export function TeamSection() {
           <Reveal>
             <div className="text-center mb-8">
               <h3 className="text-2xl lg:text-3xl font-bold text-neutral-900 mb-4">Advisory Board</h3>
-              <div className="w-16 h-1 bg-rose-600 mx-auto rounded-full"></div>
+              <div className="w-16 h-1 bg-neutral-900 mx-auto rounded-full"></div>
             </div>
           </Reveal>
 
@@ -155,14 +155,14 @@ export function TeamSection() {
                       <div className="flex items-start justify-between mb-3">
                         <div>
                           <h4 className="text-lg lg:text-xl font-bold text-neutral-900 mb-1">{member.name}</h4>
-                          <p className="text-rose-600 font-semibold text-sm lg:text-base">{member.role}</p>
+                          <p className="text-neutral-800 font-semibold text-sm lg:text-base">{member.role}</p>
                         </div>
                         
                         <motion.a
                           href={member.linkedin}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-8 h-8 bg-neutral-100 rounded-lg flex items-center justify-center text-neutral-600 hover:text-rose-600 hover:bg-rose-50 transition-colors flex-shrink-0"
+                          className="w-8 h-8 bg-neutral-100 rounded-lg flex items-center justify-center text-neutral-600 hover:text-white hover:bg-neutral-900 transition-colors flex-shrink-0"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.95 }}
                         >
