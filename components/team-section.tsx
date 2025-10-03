@@ -17,7 +17,7 @@ const teamMembers = [
   {
     id: "2",
     name: "Gokulapriya",
-    role: "Co-founder",
+    role: "Founder",
     image: "/board/Gokulapriya.png",
     bio: "Strategic co-founder focused on building impactful technology solutions.",
     linkedin: "https://www.linkedin.com/in/gokulapriya-raman-04105754/",
@@ -88,7 +88,7 @@ export function TeamSection() {
                           sizes="(max-width: 1024px) 128px, 144px"
                         />
                       </div>
-                      
+
                       {/* LinkedIn Icon */}
                       <motion.a
                         href={member.linkedin}
@@ -157,7 +157,7 @@ export function TeamSection() {
                           <h4 className="text-lg lg:text-xl font-bold text-neutral-900 mb-1">{member.name}</h4>
                           <p className="text-neutral-800 font-semibold text-sm lg:text-base">{member.role}</p>
                         </div>
-                        
+
                         <motion.a
                           href={member.linkedin}
                           target="_blank"
@@ -169,7 +169,7 @@ export function TeamSection() {
                           <Linkedin size={16} />
                         </motion.a>
                       </div>
-                      
+
                       <p className="text-neutral-600 text-sm lg:text-base leading-relaxed">
                         {member.bio}
                       </p>
