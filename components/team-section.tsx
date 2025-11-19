@@ -59,7 +59,7 @@ export function TeamSection() {
               Meet Our <span className="italic font-light text-neutral-700">Team</span>
             </h2>
             <p className="text-lg sm:text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
-              Meet the people behind our success. Our leadership team combines decades of industry experience with a passion for innovation and excellence.
+              Meet the people behind our success. Our <span className="font-semibold text-neutral-900">women-led</span> leadership team combines decades of industry experience with a passion for innovation and excellence, driving positive change in technology.
             </p>
           </Reveal>
         </div>

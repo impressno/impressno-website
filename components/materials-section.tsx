@@ -229,12 +229,12 @@ export function ServicesBackgroundSection() {
       <div className="absolute bottom-6 sm:bottom-8 left-0 right-0 z-10 px-4 sm:px-6">
         <div className="container-custom">
           <Reveal delay={0.1}>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6">
               {services.map((service, index) => (
                 <motion.button
                   key={service.id}
                   className={cn(
-                    "px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium backdrop-blur-md text-sm sm:text-base touch-target relative overflow-hidden border-2 transition-all duration-300",
+                    "px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full font-medium backdrop-blur-md text-xs sm:text-sm md:text-base touch-target relative overflow-hidden border-2 transition-all duration-300 whitespace-nowrap min-w-fit",
                     activeService === service.id
                       ? "bg-white text-neutral-900 border-white shadow-2xl"
                       : "bg-white/10 text-white border-white/30 hover:bg-white/20 hover:border-white/50",
@@ -260,7 +260,7 @@ export function ServicesBackgroundSection() {
                   }}
                 >
                   <motion.span
-                    className="relative z-10"
+                    className="relative z-10 block"
                     animate={{
                       y: activeService === service.id ? 0 : 0
                     }}

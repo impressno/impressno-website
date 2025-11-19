@@ -24,7 +24,7 @@ export function Footer() {
   }
 
   const socialLinks = [
-    { name: "Instagram", icon: Instagram, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/impressnosolutions?igsh=MTNsbzV5dm1keXQ3dQ==" },
     { name: "Twitter", icon: Twitter, href: "#" },
     { name: "Facebook", icon: Facebook, href: "#" },
   ]

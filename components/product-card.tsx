@@ -68,6 +68,10 @@ export function ProductCard({ product, onQuickLook }: ProductCardProps) {
 
       {/* Product Info */}
       <div className="absolute bottom-0 left-0 right-0 p-6">
+        {/* Dark gradient overlay for better text visibility */}
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"
+        />
         <div
           className="absolute inset-0 backdrop-blur-sm"
           style={{
@@ -91,11 +95,11 @@ export function ProductCard({ product, onQuickLook }: ProductCardProps) {
         />
         <div className="relative z-10">
           <div>
-            <h3 className="text-lg font-semibold text-white mb-1 drop-shadow-sm">{product.name}</h3>
+            <h3 className="text-lg font-semibold text-white mb-1 drop-shadow-lg" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>{product.name}</h3>
             {product.dimensions && (
-              <p className="text-sm text-white/80 mb-2 drop-shadow-sm font-medium">{product.dimensions}</p>
+              <p className="text-sm text-white/90 mb-2 drop-shadow-lg font-medium" style={{ textShadow: '0 2px 6px rgba(0,0,0,0.7)' }}>{product.dimensions}</p>
             )}
-            <p className="text-sm text-white/90 leading-relaxed drop-shadow-sm line-clamp-3">
+            <p className="text-sm text-white/95 leading-relaxed drop-shadow-lg line-clamp-3" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}>
               {product.materials.join(" ")}
             </p>
           </div>
