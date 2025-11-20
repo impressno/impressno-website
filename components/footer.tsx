@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { Instagram, Twitter, Facebook, ArrowUpRight } from "lucide-react"
+import { Instagram, Linkedin, ArrowUpRight } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -25,14 +25,7 @@ export function Footer() {
 
   const socialLinks = [
     { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/impressnosolutions?igsh=MTNsbzV5dm1keXQ3dQ==" },
-    { name: "Twitter", icon: Twitter, href: "#" },
-    { name: "Facebook", icon: Facebook, href: "#" },
-  ]
-
-  const policyLinks = [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
-    { name: "Cookies", href: "#" }
+    { name: "LinkedIn", icon: Linkedin, href: "#" },
   ]
 
   return (
@@ -142,32 +135,16 @@ export function Footer() {
 
         {/* Bottom Section */}
         <motion.div
-          className="pt-3 sm:pt-4 border-t border-neutral-200"
+          className="pt-3 sm:pt-4 pb-2 border-t border-neutral-200"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
-            <p className="text-xs sm:text-sm text-neutral-600 font-medium text-center sm:text-left">
+          <div className="flex items-center justify-center">
+            <p className="text-xs sm:text-sm text-neutral-600 font-medium text-center">
               &copy; {currentYear} Impressno. All rights reserved.
             </p>
-            <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 text-xs sm:text-sm">
-              {policyLinks.map((link, index) => (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  className="text-neutral-600 hover:text-neutral-900 transition-colors duration-300 relative group font-medium touch-target whitespace-nowrap py-1"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <span className="relative z-10">{link.name}</span>
-                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-neutral-900 transition-all duration-300 group-hover:w-full rounded-full" />
-                </motion.a>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>
