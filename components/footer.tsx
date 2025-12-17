@@ -13,8 +13,7 @@ export function Footer() {
     ],
     Company: [
       { name: "About Us", href: "#about" },
-      { name: "Blog", href: "#" },
-      { name: "Careers", href: "#" },
+      { name: "Careers", href: "/careers" },
     ],
     Support: [
       { name: "Contact Us", href: "#contact" },

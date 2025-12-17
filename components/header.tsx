@@ -12,8 +12,13 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      const isHomePage = window.location.pathname === '/'
+      // On home page, change after 20px scroll. On other pages, always show scrolled state
+      setIsScrolled(isHomePage ? window.scrollY > 20 : true)
     }
+
+    // Set initial state
+    handleScroll()
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -38,6 +43,9 @@ export function Header() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
       setIsMobileMenuOpen(false) // Close mobile menu after navigation
+    } else {
+      // If element doesn't exist (we're on a different page), navigate to home page with hash
+      window.location.href = `/#${sectionId}`
     }
   }
 
@@ -64,12 +72,15 @@ export function Header() {
             {/* Logo */}
             <motion.div className="flex-shrink-0 z-10" whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
               <a
-                href="#"
+                href="/"
                 className="flex items-center gap-2 sm:gap-3 group"
                 aria-label="Impressno Home"
                 onClick={(e) => {
-                  e.preventDefault()
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  const isHomePage = window.location.pathname === '/'
+                  if (isHomePage) {
+                    e.preventDefault()
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }
                 }}
               >
                 <div className="relative w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10">
